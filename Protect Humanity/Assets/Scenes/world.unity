@@ -267,6 +267,8 @@ GameObject:
   - component: {fileID: 570628592}
   - component: {fileID: 570628591}
   - component: {fileID: 570628590}
+  - component: {fileID: 570628594}
+  - component: {fileID: 570628595}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -300,7 +302,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &570628591
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -371,6 +373,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &570628594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570628589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f266c07f7a41dcb4e9d7fe04e9810e80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 0
+  durability: 0
+  energy: 0
+  recovery: 0
+  support: 0
+  attackText: {fileID: 0}
+  durabilityText: {fileID: 0}
+  energyText: {fileID: 0}
+  recoveryText: {fileID: 0}
+  supportText: {fileID: 0}
+--- !u!114 &570628595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570628589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3377611e44681c24489c63562cecd167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
