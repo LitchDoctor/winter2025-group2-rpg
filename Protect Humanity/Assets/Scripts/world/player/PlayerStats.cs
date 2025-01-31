@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
-    public int attack, durability, energy, recovery, support;
+    public int attack = 5, durability = 3, energy = 2, recovery = 1, support = 15;
 
     [SerializeField]
     private TMP_Text attackText, durabilityText, energyText, recoveryText, supportText;

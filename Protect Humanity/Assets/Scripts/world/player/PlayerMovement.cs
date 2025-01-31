@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float speed = 5.0f;
     private Rigidbody2D rb;
     private Vector2 input;
 
