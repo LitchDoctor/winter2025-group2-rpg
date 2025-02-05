@@ -10,5 +10,5 @@ public class InteractionObject : MonoBehaviour
     {
         //Picked up and put in inventory
         gameObject.SetActive(false);
-    }*
+    }
 }
