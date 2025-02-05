@@ -12,4 +12,13 @@ public class PlayerInteraction : MonoBehaviour
             currentInterObj = other.gameObject;
         }
     }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.CompareTag ("interObject")){
+            if(other.gameObject == currentInterObj){
+                currentInterObj = null;
+            }
+        }
+    }
 }
