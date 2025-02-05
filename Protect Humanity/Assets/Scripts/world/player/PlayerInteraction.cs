@@ -12,7 +12,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         if(Input.GetButtonDown ("Interact") && currentInterObj){
             //Do something with the object
-            currentInterObj.sendMessage("DoInteraction");
+            currentInterObj.SendMessage("DoInteraction");
         }
     }
 
