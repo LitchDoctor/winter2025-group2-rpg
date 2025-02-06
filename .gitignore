@@ -2,18 +2,18 @@
 # Based on latest GitHub Unity gitignore template & includes our specific additions
 
 # Unity generated folders
-/[Aa]ssets/AssetStoreTools*
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ibrary/
-/[Ll]ocal[Cc]ache/
-/[Oo]bj/
-/[Tt]emp/
-/[Uu]nityGenerated/
-/[Uu]ser[Ss]ettings/
-/[Ll]ogs/
-/[Mm]emoryCaptures/
-/[Rr]ecordings/
+[Aa]ssets/AssetStoreTools*
+[Bb]uild/
+[Bb]uilds/
+[Ll]ibrary/
+[Ll]ocal[Cc]ache/
+[Oo]bj/
+[Tt]emp/
+[Uu]nityGenerated/
+[Uu]ser[Ss]ettings/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Rr]ecordings/
 
 # Unity3D generated files
 sysinfo.txt
