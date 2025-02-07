@@ -34,6 +34,7 @@ crashlytics-build.properties
 
 # Visual Studio / MonoDevelop
 .vs/
+.vscode/
 .gradle/
 [Ee]xportedObj/
 .consulo/
