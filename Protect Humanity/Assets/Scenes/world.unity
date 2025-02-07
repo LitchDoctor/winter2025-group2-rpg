@@ -598,6 +598,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInterObj: {fileID: 0}
+<<<<<<< HEAD
+=======
+  currentInterObjScript: {fileID: 0}
+  inventory: {fileID: 570628596}
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
 --- !u!61 &570628598
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -636,13 +641,21 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
     oldSize: {x: 3.86, y: 5.62}
+=======
+    oldSize: {x: 1.78, y: 4.34}
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
+<<<<<<< HEAD
   m_Size: {x: 3.86, y: 5.62}
+=======
+  m_Size: {x: 1.78, y: 4.34}
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
   m_EdgeRadius: 0
 --- !u!1 &619394800
 GameObject:
@@ -759,6 +772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6b5c9ade4c14f5c83e50ec32cf4c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: 1
 --- !u!58 &792732703
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -859,7 +873,11 @@ Transform:
   m_GameObject: {fileID: 792732701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: -3.02, z: 0}
+=======
+  m_LocalPosition: {x: 0, y: -5, z: 0}
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1001,7 +1019,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809065188}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 --- !u!1 &973081059
+=======
+--- !u!1 &1287532805
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1009,6 +1031,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 973081060}
   - component: {fileID: 973081062}
   - component: {fileID: 973081061}
@@ -1016,16 +1039,31 @@ GameObject:
   m_Layer: 0
   m_Name: stage 2 base
   m_TagString: Untagged
+=======
+  - component: {fileID: 1287532809}
+  - component: {fileID: 1287532808}
+  - component: {fileID: 1287532807}
+  - component: {fileID: 1287532806}
+  m_Layer: 0
+  m_Name: ShieldGenerator
+  m_TagString: interObject
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &973081060
 Transform:
+=======
+--- !u!58 &1287532806
+CircleCollider2D:
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 973081059}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -44246,6 +44284,9 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973081059}
+=======
+  m_GameObject: {fileID: 1287532805}
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -44269,11 +44310,16 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+<<<<<<< HEAD
   m_IsTrigger: 0
+=======
+  m_IsTrigger: 1
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
+<<<<<<< HEAD
   m_EdgeRadius: 0
   m_Points:
   - {x: -8, y: 8}
@@ -44299,10 +44345,16 @@ EdgeCollider2D:
   m_UseAdjacentEndPoint: 0
 --- !u!1 &1082839508
 GameObject:
+=======
+  m_Radius: 0.5
+--- !u!114 &1287532807
+MonoBehaviour:
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1082839509}
@@ -44359,12 +44411,26 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!212 &1082839512
+=======
+  m_GameObject: {fileID: 1287532805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6b5c9ade4c14f5c83e50ec32cf4c0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: 0
+--- !u!212 &1287532808
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1082839508}
+=======
+  m_GameObject: {fileID: 1287532805}
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -44402,7 +44468,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
   m_Sprite: {fileID: 5132368935440266472, guid: 59e0c5e754111ee4ea6eba2441b84359, type: 3}
+=======
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -44413,12 +44483,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!114 &1082839513
 MonoBehaviour:
+=======
+--- !u!4 &1287532809
+Transform:
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1082839508}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -44427,6 +44503,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 570628589}
   followDistance: 3
+=======
+  m_GameObject: {fileID: 1287532805}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5, y: -1.3999996, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
 --- !u!1 &1516400208
 GameObject:
   m_ObjectHideFlags: 0
@@ -45208,5 +45295,9 @@ SceneRoots:
   - {fileID: 1082839509}
   - {fileID: 1697702439}
   - {fileID: 792732705}
+<<<<<<< HEAD
   - {fileID: 1574587077}
   - {fileID: 1979689372}
+=======
+  - {fileID: 1287532809}
+>>>>>>> 7320cf9 (Items can now be added to inventory and stored.)
