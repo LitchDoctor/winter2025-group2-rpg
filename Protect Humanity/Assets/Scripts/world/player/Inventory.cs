@@ -20,6 +20,7 @@ public class Inventory : MonoBehaviour
                 inventory [i] = item;
                 Debug.Log (item.name + "was added");
                 itemAdded = true;
+                item.SendMessage("DoInteraction");
                 break;
             }
         }

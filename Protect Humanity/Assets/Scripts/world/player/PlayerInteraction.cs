@@ -6,13 +6,18 @@ public class PlayerInteraction : MonoBehaviour
 {
     //creates an object and sets it to null
     public GameObject currentInterObj = null;
+    public InteractionObject currentInterObjScript = null;
+    public Inventory inventory;
 
     //function that allows user to use whatever item is being interacted with
     void Update()
     {
         if(Input.GetButtonDown ("Interact") && currentInterObj){
-            //Do something with the object
-            currentInterObj.SendMessage("DoInteraction");
+            //check if object can be stored in inventory
+            if(currentInterObjScript.inventory){
+                inventory.AddItem(currentInterObj);
+            }
+
         }
     }
 
@@ -22,6 +27,7 @@ public class PlayerInteraction : MonoBehaviour
         if(other.CompareTag ("interObject")){
             Debug.Log(other.name);
             currentInterObj = other.gameObject;
+            currentInterObjScript = currentInterObj.GetComponent <InteractionObject> ();
         }
     }
 
