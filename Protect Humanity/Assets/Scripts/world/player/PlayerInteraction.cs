@@ -8,11 +8,18 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject currentInterObj = null;
     public InteractionObject currentInterObjScript = null;
     public Inventory inventory;
+    public InteractionObject currentInterObjScript = null;
+    public Inventory inventory;
 
     //function that allows user to use whatever item is being interacted with
     void Update()
     {
         if(Input.GetButtonDown ("Interact") && currentInterObj){
+            //check if object can be stored in inventory
+            if(currentInterObjScript.inventory){
+                inventory.AddItem(currentInterObj);
+            }
+
             //check if object can be stored in inventory
             if(currentInterObjScript.inventory){
                 inventory.AddItem(currentInterObj);
@@ -28,10 +35,6 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log(other.name);
             currentInterObj = other.gameObject;
             currentInterObjScript = currentInterObj.GetComponent <InteractionObject> ();
-        }
-
-        if(other.gameObject.tag == "encounter"){
-            GameBehaviour.Instance.sceneToMoveTo("encounter1");
         }
     }
 
