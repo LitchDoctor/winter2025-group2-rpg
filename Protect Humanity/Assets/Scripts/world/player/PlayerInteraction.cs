@@ -23,6 +23,10 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log(other.name);
             currentInterObj = other.gameObject;
         }
+
+        if(other.gameObject.tag == "encounter"){
+            GameBehaviour.Instance.sceneToMoveTo("encounter1");
+        }
     }
 
     //when players leaves the range of object's collider

@@ -29,8 +29,6 @@ public class FollowerMovement : MonoBehaviour
         }
         if (Vector3.Distance(player.transform.position, transform.position) > followDistance){
             transform.position = playerHistory.Dequeue();
-
-            Debug.Log("The follower should move.");
         }
         oldPlayerPos = player.transform.position;
     }
