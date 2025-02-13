@@ -736,6 +736,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentInterObj: {fileID: 0}
+  currentInterObjScript: {fileID: 0}
+  inventory: {fileID: 570628596}
 --- !u!61 &570628598
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -897,6 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd6b5c9ade4c14f5c83e50ec32cf4c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: 1
 --- !u!58 &792732703
 CircleCollider2D:
   m_ObjectHideFlags: 0
