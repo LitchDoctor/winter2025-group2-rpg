@@ -7,8 +7,6 @@ public class Inventory : MonoBehaviour
     // create the array to hold items
     public GameObject[] inventory = new GameObject [10];
 
-    static Rigidbody rb;
-
     public void AddItem(GameObject item)
     {
 
@@ -25,7 +23,7 @@ public class Inventory : MonoBehaviour
         }
 
         // if inventory is full
-        if(itemAdded){
+        if(!itemAdded){
             Debug.Log ("Inventory full - item not added");
         }
     }
