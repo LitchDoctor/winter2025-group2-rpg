@@ -1,0 +1,17 @@
+Items can now be added to inventory and stored.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# interactive rebase in progress; onto 3c5de05
+# Last commands done (5 commands done):
+#    pick 6120260 Items can now be added to inventory and stored.
+#    pick 7320cf9 Items can now be added to inventory and stored.
+# Next commands to do (2 remaining commands):
+#    pick f3f1255 Add individual changes
+#    pick e320e13 Items can now be added to inventory and stored.
+# You are currently rebasing branch 'playerProgression' on '3c5de05'.
+#
+# Changes to be committed:
+#	modified:   Protect Humanity/Assets/Scripts/world/player/PlayerInteraction.cs
+#
