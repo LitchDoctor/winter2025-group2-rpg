@@ -24,7 +24,6 @@ public class BattleSystem : MonoBehaviour
     void SetupBattle()
     {
         Instantiate(playerPrefab, playerBattleStation);
-        //Instantiate(playerPrefab);
-    
+        Instantiate(enemyPrefab, enemyBattleStation);
     }
 }
