@@ -14,13 +14,12 @@ public class PlayerInteraction : MonoBehaviour
     //function that allows user to use whatever item is being interacted with
     void Update()
     {
-    if(Input.GetButtonDown ("Interact") && currentInterObj){
-        //check if object can be stored in inventory
-        if(currentInterObjScript.inventory){
-            inventory.AddItem(currentInterObj);
-        }
-
-
+        if(Input.GetButtonDown ("Interact") && currentInterObj){
+            //check if object can be stored in inventory
+            if(currentInterObjScript.inventory){
+                inventory.AddItem(currentInterObj);
+            }
+            currentInterObj.SendMessage("DoInteraction");
         }
     }
 
