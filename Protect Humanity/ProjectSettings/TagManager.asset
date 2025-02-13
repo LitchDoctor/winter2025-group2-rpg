@@ -2,8 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - interObject
+  - encounter
   layers:
   - Default
   - TransparentFX
@@ -38,6 +40,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: stage base
+    uniqueID: 1469357683
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: stage assets
+    uniqueID: 4223620963
+    locked: 0
+  - name: players
+    uniqueID: 829901311
+    locked: 0
+  m_RenderingLayers:
+  - Default

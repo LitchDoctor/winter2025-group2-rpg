@@ -1,40 +1,69 @@
-###
-# Unity folders and files
-###
+# Combined and optimized .gitignore for Unity projects
+# Based on latest GitHub Unity gitignore template & includes our specific additions
+
+# Unity generated folders
 [Aa]ssets/AssetStoreTools*
 [Bb]uild/
+[Bb]uilds/
 [Ll]ibrary/
 [Ll]ocal[Cc]ache/
 [Oo]bj/
 [Tt]emp/
 [Uu]nityGenerated/
-Protect Humanity/UserSettings/
-# file on crash reports
-sysinfo.txt
-# Unity3D generated meta files
-*.pidb.meta
-# Log files
-*.log
+[Uu]ser[Ss]ettings/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Rr]ecordings/
 
-###
-# VS/MD solution and project files
-###
+# Unity3D generated files
+sysinfo.txt
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+*.dwlt
+
+# Crashlytics
+crashlytics-build.properties
+
+# Build files
+*.apk
+*.aab
+*.unitypackage
+*.unitypackage.meta
+*.app
+
+# Visual Studio / MonoDevelop
+.vs/
+.vscode/
+.gradle/
 [Ee]xportedObj/
-*.booproj
+.consulo/
 *.csproj
+*.unityproj
 *.sln
 *.suo
-*.svd
-*.unityproj
+*.tmp
 *.user
 *.userprefs
 *.pidb
-.DS_Store
-**/*.log
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
 
-###
-# OS generated
-###
+# JetBrains Rider
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Auto-generated Android Assets
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -43,3 +72,6 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Log files
+*.log
