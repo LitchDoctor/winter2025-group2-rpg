@@ -33,6 +33,16 @@ public class GameBehaviour : MonoBehaviour
         encounterPanel.gameObject.SetActive(false);
     }
 
+    public void AttemptToRun(float success_percentage){
+        float rand = Random.value;
+        Debug.Log(rand + " : " + success_percentage/100);
+        if(success_percentage/100 < rand){
+            GoEncounter();
+        }else{
+            HideEncounterPanel();
+        }
+    }
+
         public void ShowEncounterPanel(){
         encounterPanel.gameObject.SetActive(true);
     }
