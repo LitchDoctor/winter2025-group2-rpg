@@ -1496,8 +1496,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 6472919423884957124, guid: 99f19c12fb0062e46891a359e8e363d4, type: 3}
   enemyPrefab: {fileID: 3779901314293007569, guid: 9a5f2832217a4ce469fcac169b205d3f, type: 3}
-  playerBattleStation: {fileID: 0}
-  enemyBattleStation: {fileID: 0}
+  playerBattleStation: {fileID: 940618422}
+  enemyBattleStation: {fileID: 1030640628}
   state: 0
 --- !u!4 &1391344734
 Transform:
