@@ -8,8 +8,6 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject currentInterObj = null;
     public InteractionObject currentInterObjScript = null;
     public Inventory inventory;
-    public InteractionObject currentInterObjScript = null;
-    public Inventory inventory;
 
     //function that allows user to use whatever item is being interacted with
     void Update()
