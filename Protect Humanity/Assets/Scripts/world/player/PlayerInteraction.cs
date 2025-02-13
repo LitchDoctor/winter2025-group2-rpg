@@ -1,11 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
     //creates an object and sets it to null
     public GameObject currentInterObj = null;
+
+    public static GameBehaviour Instance;
+
+
+    void Awake()
+    {
+    }
 
     //function that allows user to use whatever item is being interacted with
     void Update()
@@ -25,7 +30,9 @@ public class PlayerInteraction : MonoBehaviour
         }
 
         if(other.gameObject.tag == "encounter"){
-            GameBehaviour.Instance.sceneToMoveTo("encounter1");
+            GetComponent<PlayerMovement>().LockMovement();
+            GameBehaviour.Instance.ShowEncounterPanel();
+            GameBehaviour.Instance.SetNextEncounter(other.GetComponent<Encounter>().encounterSceneName);
         }
     }
 
@@ -36,6 +43,9 @@ public class PlayerInteraction : MonoBehaviour
             if(other.gameObject == currentInterObj){
                 currentInterObj = null;
             }
+        }
+        if(other.gameObject.tag == "encounter"){
+            GameBehaviour.Instance.HideEncounterPanel();        
         }
     }
 }

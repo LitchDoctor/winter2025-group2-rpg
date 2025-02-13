@@ -3,9 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class GameBehaviour : MonoBehaviour
 {
-
+    private string nextEncounter;
     public static GameBehaviour Instance;
 
+    public GameObject encounterPanel;
     private void Awake()
     {
         if (Instance == null){
@@ -15,19 +16,24 @@ public class GameBehaviour : MonoBehaviour
         }
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+
+    public void GoToScene(string sceneName){
+        SceneManager.LoadScene(sceneName);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void SetNextEncounter(string encounterName){
+        nextEncounter = encounterName;
     }
 
-    public void sceneToMoveTo(string scene){
-        SceneManager.LoadScene(scene);
+    public void GoEncounter(){
+        SceneManager.LoadScene(nextEncounter);
+    }
+
+    public void HideEncounterPanel(){
+        encounterPanel.gameObject.SetActive(false);
+    }
+
+        public void ShowEncounterPanel(){
+        encounterPanel.gameObject.SetActive(true);
     }
 }
