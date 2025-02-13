@@ -33,6 +33,4 @@ public class FollowerMovement : MonoBehaviour
         oldPlayerPos = player.transform.position;
     }
 
-
-
 }

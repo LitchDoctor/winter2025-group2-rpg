@@ -29,6 +29,10 @@ public class PlayerInteraction : MonoBehaviour
             currentInterObj = other.gameObject;
             currentInterObjScript = currentInterObj.GetComponent <InteractionObject> ();
         }
+
+        if(other.gameObject.tag == "encounter"){
+            GameBehaviour.Instance.sceneToMoveTo("encounter1");
+        }
     }
 
     //when players leaves the range of object's collider
