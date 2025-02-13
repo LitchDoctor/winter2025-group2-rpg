@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class PlayerInteraction : MonoBehaviour
@@ -9,6 +10,14 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject currentInterObj = null;
     public InteractionObject currentInterObjScript = null;
     public Inventory inventory;
+    public GameObject interactionUI;
+
+    void start()
+    {
+        if(interactionUI != null){
+            interactionUI.SetActive(false);
+        }
+    }
 
 
     //function that allows user to use whatever item is being interacted with
@@ -20,6 +29,7 @@ public class PlayerInteraction : MonoBehaviour
                 inventory.AddItem(currentInterObj);
             }
             currentInterObj.SendMessage("DoInteraction");
+            interactionUI.SetActive(false);
         }
     }
 
@@ -31,6 +41,10 @@ public class PlayerInteraction : MonoBehaviour
             Debug.Log(other.name);
             currentInterObj = other.gameObject;
             currentInterObjScript = currentInterObj.GetComponent <InteractionObject> ();
+
+            if(interactionUI != null){
+                interactionUI.SetActive(true);
+            }
         }
     }
 
@@ -40,7 +54,10 @@ public class PlayerInteraction : MonoBehaviour
     {
         if(other.CompareTag ("interObject")){
             if(other.gameObject == currentInterObj){
-            currentInterObj = null;
+                currentInterObj = null;
+                if(interactionUI != null){
+                    interactionUI.SetActive(false);
+                }
             }
         }
     }

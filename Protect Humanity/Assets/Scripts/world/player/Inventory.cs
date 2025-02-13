@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
         }
 
         // if inventory is full
-        if(itemAdded){
+        if(!itemAdded){
             Debug.Log ("Inventory full - item not added");
         }
     }
