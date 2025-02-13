@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -9,6 +7,8 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject currentInterObj = null;
     public InteractionObject currentInterObjScript = null;
     public Inventory inventory;
+
+    public static GameBehaviour Instance;
 
 
     //function that allows user to use whatever item is being interacted with
@@ -30,7 +30,12 @@ public class PlayerInteraction : MonoBehaviour
         if(other.CompareTag ("interObject")){
             Debug.Log(other.name);
             currentInterObj = other.gameObject;
-            currentInterObjScript = currentInterObj.GetComponent <InteractionObject> ();
+        }
+
+        if(other.gameObject.tag == "encounter"){
+            GetComponent<PlayerMovement>().LockMovement();
+            GameBehaviour.Instance.ShowEncounterPanel();
+            GameBehaviour.Instance.SetNextEncounter(other.GetComponent<Encounter>().encounterSceneName);
         }
     }
 
@@ -42,6 +47,9 @@ public class PlayerInteraction : MonoBehaviour
             if(other.gameObject == currentInterObj){
             currentInterObj = null;
             }
+        }
+        if(other.gameObject.tag == "encounter"){
+            GameBehaviour.Instance.HideEncounterPanel();        
         }
     }
 }
