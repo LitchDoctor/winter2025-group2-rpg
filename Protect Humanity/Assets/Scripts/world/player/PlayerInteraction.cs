@@ -15,7 +15,7 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject interactionUI;
 
 
-    void start()
+    void Start()
     {
         if(interactionUI != null){
             interactionUI.SetActive(false);
