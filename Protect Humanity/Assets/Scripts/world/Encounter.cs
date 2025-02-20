@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Encounter : MonoBehaviour
+public class CombatEncounter : MonoBehaviour
 {
     public string encounterSceneName = "battle1";
 }
