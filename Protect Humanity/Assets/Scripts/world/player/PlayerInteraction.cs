@@ -36,6 +36,10 @@ public class PlayerInteraction : MonoBehaviour
             currentInterObj.SendMessage("DoInteraction");
             interactionUI.SetActive(false);
         }
+
+        if(Input.GetKeyDown(KeyCode.I)){
+            inventory.ToggleInventory();
+        }
     }
 
 
