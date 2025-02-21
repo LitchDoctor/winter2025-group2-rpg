@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|c:\\users\\graha\\desktop\\homework\\software engineering ii\\winter2025-group2-rpg\\protect humanity\\assets\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|c:\\users\\graha\\desktop\\homework\\software engineering ii\\winter2025-group2-rpg\\protect humanity\\assets\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "playerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\playerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\playerMovement.cs",
-              "ToolTip": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\playerMovement.cs",
-              "RelativeToolTip": "Assets\\playerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\MainMenu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-29T00:36:33.676Z",
+              "WhenOpened": "2025-02-11T03:14:04.698Z",
               "EditorCaption": ""
             }
           ]

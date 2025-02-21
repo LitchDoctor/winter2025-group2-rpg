@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 input;
 
+    private bool canMove = true;
+
 
     void Start()
     {
@@ -28,8 +30,18 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = input*speed;
+        if(canMove){
+            rb.linearVelocity = input*speed;
+        }else{
+            rb.linearVelocity = input*0;
+        }
     }
 
+    public void LockMovement(){
+        canMove = false;
+    }
+    public void FreeMovement(){
+        canMove = true;
+    }
 
 }
