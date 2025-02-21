@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SteelBarSprite_0: -8543611494945019382
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
