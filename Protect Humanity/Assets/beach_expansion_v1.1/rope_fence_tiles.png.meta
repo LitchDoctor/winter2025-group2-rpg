@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rope_fence_tiles_0: 5624796709891554886
+      rope_fence_tiles_1: -1066773804551251371
+      rope_fence_tiles_2: -3153122679875064215
+      rope_fence_tiles_3: -7474661705148290815
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
