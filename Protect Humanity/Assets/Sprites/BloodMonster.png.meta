@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 43e833abf6b8927429c815fa6276357a
+guid: d51a1c140150ada49a2639671567b17b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3829015886114274145
-    second: cheeseBurgerSprite_0
+      213: 765816540238992880
+    second: BloodMonster_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cheeseBurgerSprite_0
+      name: BloodMonster_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 127
-        width: 898
-        height: 802
+        x: 95
+        y: 31
+        width: 834
+        height: 962
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16b3b2359a5632530800000000000000
-      internalID: 3829015886114274145
+      spriteID: 0f5501cf51ab0aa00800000000000000
+      internalID: 765816540238992880
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      cheeseBurgerSprite_0: 3829015886114274145
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
