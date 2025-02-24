@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ public class Inventory : MonoBehaviour
     // create the array to hold items
     public GameObject[] inventory = new GameObject [10];
     public GameObject InventoryUI;
-    public Button[] itemSlots;
+    [SerializeField] public Button[] itemSlots;
 
     public void Start () 
     {
@@ -53,7 +54,8 @@ public class Inventory : MonoBehaviour
     {
         for(int i = 0; i < itemSlots.Length; i++){
             if(inventory[i] != null){
-                itemSlots[i].GetComponentInChildren<Text>().text = inventory[i].name;
+                itemSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = inventory[i].name;
+                itemSlots[i].GetComponentInChildren<Image>().sprite = inventory[i].GetComponent<SpriteRenderer>().sprite;
             }
             else{
                 itemSlots[i].GetComponentInChildren<Text>().text = "";
