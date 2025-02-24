@@ -59,11 +59,10 @@ public class PlayerInteraction : MonoBehaviour
             }
         }
 
-
-    if(other.gameObject.tag == "encounter"){
-        GetComponent<PlayerMovement>().LockMovement();
-        GameBehaviour.Instance.ShowEncounterPanel();
-        GameBehaviour.Instance.SetNextEncounter(other.GetComponent<Encounter>().encounterSceneName);
+        if(other.CompareTag("encounter")){
+            GetComponent<PlayerMovement>().LockMovement();
+            GameBehaviour.Instance.ShowEncounterPanel();
+            //GameBehaviour.Instance.SetNextEncounter(other.GetComponent<Encounter>().encounterSceneName);
         }
     }
 

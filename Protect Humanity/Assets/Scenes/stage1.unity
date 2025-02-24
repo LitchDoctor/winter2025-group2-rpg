@@ -51129,6 +51129,7 @@ GameObject:
   - component: {fileID: 1979689372}
   - component: {fileID: 1979689371}
   - component: {fileID: 1979689374}
+  - component: {fileID: 1979689375}
   m_Layer: 0
   m_Name: BloodMonster
   m_TagString: encounter
@@ -51260,6 +51261,19 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1979689375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979689369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27fea3e9377571341a13869843e994cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encounterSceneName: combat1
 --- !u!1 &2050738543
 GameObject:
   m_ObjectHideFlags: 0

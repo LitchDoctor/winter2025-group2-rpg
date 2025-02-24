@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|c:\\users\\graha\\desktop\\homework\\software engineering ii\\winter2025-group2-rpg\\protect humanity\\assets\\scripts\\world\\encounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world\\encounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|c:\\users\\graha\\desktop\\homework\\software engineering ii\\winter2025-group2-rpg\\protect humanity\\assets\\scripts\\world\\player\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world\\player\\playerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|c:\\users\\graha\\desktop\\homework\\software engineering ii\\winter2025-group2-rpg\\protect humanity\\assets\\scripts\\world\\player\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world\\player\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:Assets\\MainMenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,30 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\Scripts\\world\\player\\Inventory.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\world\\player\\Inventory.cs",
-              "ToolTip": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\Scripts\\world\\player\\Inventory.cs",
-              "RelativeToolTip": "Assets\\Scripts\\world\\player\\Inventory.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Encounter.cs",
+              "DocumentMoniker": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\Scripts\\world\\Encounter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\world\\Encounter.cs",
+              "ToolTip": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\Scripts\\world\\Encounter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\world\\Encounter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-20T23:43:52.506Z",
+              "WhenOpened": "2025-02-24T18:58:59.378Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerInteraction.cs",
               "DocumentMoniker": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\Scripts\\world\\player\\PlayerInteraction.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\world\\player\\PlayerInteraction.cs",
               "ToolTip": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg\\Protect Humanity\\Assets\\Scripts\\world\\player\\PlayerInteraction.cs",
               "RelativeToolTip": "Assets\\Scripts\\world\\player\\PlayerInteraction.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA1wC8AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwEAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-20T23:39:31.031Z",
               "EditorCaption": ""
