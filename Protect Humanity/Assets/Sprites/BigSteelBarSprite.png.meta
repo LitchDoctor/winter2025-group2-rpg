@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BigSteelBarSprite_0: -2148091629189626235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
