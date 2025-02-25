@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      macheteSprite_0: -4434481780963274756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
