@@ -48,7 +48,7 @@ public class PlayerInteraction : MonoBehaviour
     //when player comes in contact with an object
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag ("interObject")){
+        if(other.CompareTag("interObject")){
             Debug.Log(other.name);
             currentInterObj = other.gameObject;
             currentInterObjScript = currentInterObj.GetComponent <InteractionObject> ();
