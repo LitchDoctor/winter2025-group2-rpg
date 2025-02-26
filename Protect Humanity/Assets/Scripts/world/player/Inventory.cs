@@ -15,6 +15,12 @@ public class Inventory : MonoBehaviour
     public PlayerStats playerstats;
     public Button equipped;
     private GameObject EquippedItem;
+    public GameObject ItemInfoPanel;
+    public TextMeshProUGUI itemNameText;
+    public Image itemIcon;
+    public TextMeshProUGUI itemDescriptionText;
+    public Button equipButton;
+
     private GameObject SelectedItem;
 
     [SerializeField] public Button[] itemSlots;
@@ -73,11 +79,29 @@ public class Inventory : MonoBehaviour
 
     public void ToggleInventory()
     {
+        bool isActive = !InventoryUI.activeSelf;
         InventoryUI.SetActive(!InventoryUI.activeSelf);
+
+        if(isActive)
+        {
+            ItemInfoPanel.SetActive(false);
+        }
     }
 
     public void SelectItem(int slot){
         SelectedItem = inventory[slot];
+
+        if(SelectedItem != null)
+        {
+            itemNameText.text = SelectedItem.name;
+            itemIcon.sprite = SelectedItem.GetComponent<SpriteRenderer>().sprite;
+            InteractionObject itemScript = SelectedItem.GetComponent<InteractionObject>();
+
+            ItemInfoPanel.SetActive(true);
+
+            equipButton.onClick.RemoveAllListeners();
+            equipButton.onClick.AddListener(() => equipItem());
+        }
     }
 
     public void equipItem(){
