@@ -730,6 +730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: 1
+  description: Metal from a bygone era. Perhaps Equipping it will help you take more
+    hits... +5 durability
 --- !u!4 &136621340
 Transform:
   m_ObjectHideFlags: 0
@@ -2381,6 +2383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: 1
+  description: Rusty but still useful. A chestplate that's been through more than
+    a few battles... +12 durability
 --- !u!4 &433464172
 Transform:
   m_ObjectHideFlags: 0

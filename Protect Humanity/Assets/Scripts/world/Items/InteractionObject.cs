@@ -8,6 +8,8 @@ using UnityEngine;
 public class InteractionObject : MonoBehaviour
 {
     public bool inventory; //if true, object can be stored in inventory
+    [TextArea]
+    public string description;
     private Rigidbody2D rb;
 
 
