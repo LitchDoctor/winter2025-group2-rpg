@@ -4,8 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-
-
 public class PlayerInteraction : MonoBehaviour
 {
     //creates an object and sets it to null
@@ -15,32 +13,43 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject interactionUI;
 
 
+
+
     void Start()
     {
-        if(interactionUI != null){
+        if(interactionUI != null)
+        {
             interactionUI.SetActive(false);
         }
     }
 
-
     public static GameBehaviour Instance;
+
 
     //function that allows user to use whatever item is being interacted with
     void Update()
     {
-        if(Input.GetButtonDown ("Interact") && currentInterObj){
+        if(Input.GetButtonDown ("Interact") && currentInterObj)
+        {
             //check if object can be stored in inventory
-            if(currentInterObjScript.inventory){
-                inventory.AddItem(currentInterObj);
+            if(currentInterObjScript.inventory)
+            {
+            inventory.AddItem(currentInterObj);
             }
             currentInterObj.SendMessage("DoInteraction");
             interactionUI.SetActive(false);
         }
 
-        if(Input.GetKeyDown(KeyCode.I)){
-            inventory.ToggleInventory();
+
+            if(Input.GetKeyDown(KeyCode.I))
+            {
+                inventory.ToggleInventory();
+            }
         }
-    }
+
+
+
+
 
 
 
@@ -48,18 +57,24 @@ public class PlayerInteraction : MonoBehaviour
     //when player comes in contact with an object
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("interObject")){
+        if(other.CompareTag("interObject"))
+        {
             Debug.Log(other.name);
             currentInterObj = other.gameObject;
             currentInterObjScript = currentInterObj.GetComponent <InteractionObject> ();
 
 
-        if(interactionUI != null){
-            interactionUI.SetActive(true);
+
+
+            if(interactionUI != null)
+            {
+                interactionUI.SetActive(true);
             }
         }
 
-        if(other.CompareTag("encounter")){
+
+        if(other.CompareTag("encounter"))
+        {
             GetComponent<PlayerMovement>().LockMovement();
             GameBehaviour.Instance.ShowEncounterPanel();
             //GameBehaviour.Instance.SetNextEncounter(other.GetComponent<Encounter>().encounterSceneName);
@@ -69,21 +84,27 @@ public class PlayerInteraction : MonoBehaviour
 
 
 
+
+
+
+
     //when players leaves the range of object's collider
     void OnTriggerExit2D(Collider2D other)
     {
-        if(other.CompareTag ("interObject")){
-            if(other.gameObject == currentInterObj){
+        if(other.CompareTag ("interObject"))
+        {
+            if(other.gameObject == currentInterObj)
+            {
                 currentInterObj = null;
-            if(interactionUI != null){
-                interactionUI.SetActive(false);
+                if(interactionUI != null)
+                {
+                    interactionUI.SetActive(false);
+                }
             }
         }
-    }
-        if(other.gameObject.tag == "encounter"){
-        GameBehaviour.Instance.HideEncounterPanel();
+        if(other.gameObject.tag == "encounter")
+        {
+            GameBehaviour.Instance.HideEncounterPanel();
         }
     }
 }
-
-
