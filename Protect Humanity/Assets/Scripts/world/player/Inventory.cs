@@ -88,7 +88,8 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void SelectItem(int slot){
+    public void SelectItem(int slot)
+    {
         SelectedItem = inventory[slot];
 
         if(SelectedItem != null)
@@ -101,8 +102,17 @@ public class Inventory : MonoBehaviour
 
             equipButton.onClick.RemoveAllListeners();
             equipButton.onClick.AddListener(() => equipItem());
+            if (itemScript != null && descriptionText != null)
+            {
+                descriptionText.text = itemScript.description; // Show item description
+            }
+            else
+            {
+                descriptionText.text = "No description available.";
+            }
         }
     }
+    
 
     public void equipItem(){
         if (SelectedItem != null){
