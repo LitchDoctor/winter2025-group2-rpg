@@ -1,23 +1,37 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
-    public int attack = 5, durability = 3, energy = 2, recovery = 1, support = 15;
+    public Inventory inventory;
 
+
+    public Stats baseStats;
+    public Stats stats;
     [SerializeField]
-    private TMP_Text attackText, durabilityText, energyText, recoveryText, supportText;
-    void Start(){
+    private TextMeshProUGUI attackText, durabilityText, energyText, recoveryText, supportText;
+
+
+    void Start()
+    {
         UpdateStats();
     }
 
 
-    public void UpdateStats(){
-        attackText.text = attack.ToString();
-        durabilityText.text = durability.ToString();
-        energyText.text = energy.ToString();
-        recoveryText.text = recovery.ToString();
-        supportText.text = support.ToString();
+
+
+    public void UpdateStats()
+    {
+        stats.Set(baseStats.Add(inventory.getEquipped()));
+
+
+        attackText.text = stats.attack.ToString();
+        durabilityText.text = stats.durability.ToString();
+        energyText.text = stats.energy.ToString();
+        recoveryText.text = stats.recovery.ToString();
+        supportText.text = stats.support.ToString();
     }
+
 
 }
