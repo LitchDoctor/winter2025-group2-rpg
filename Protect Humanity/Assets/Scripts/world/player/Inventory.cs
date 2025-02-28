@@ -102,7 +102,7 @@ public class Inventory : MonoBehaviour
 
             equipButton.onClick.RemoveAllListeners();
             equipButton.onClick.AddListener(() => equipItem());
-            if (itemScript != null && descriptionText != null)
+            if (itemScript != null && itemDescriptionText != null)
             {
                 itemDescriptionText.text = itemScript.description; // Show item description
             }
