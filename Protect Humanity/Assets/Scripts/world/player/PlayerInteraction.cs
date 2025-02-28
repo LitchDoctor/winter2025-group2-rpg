@@ -34,7 +34,7 @@ public class PlayerInteraction : MonoBehaviour
             //check if object can be stored in inventory
             if(currentInterObjScript.inventory)
             {
-            inventory.AddItem(currentInterObj);
+                inventory.AddItem(currentInterObj);
             }
             currentInterObj.SendMessage("DoInteraction");
             interactionUI.SetActive(false);
