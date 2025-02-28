@@ -35,7 +35,7 @@ public class GameBehaviour : MonoBehaviour
 
     public void AttemptToRun(float success_percentage){
         float rand = Random.value;
-        Debug.Log(rand + " : " + success_percentage/100);
+        // Debug.Log(rand + " : " + success_percentage/100);
         if(success_percentage/100 < rand){
             GoEncounter();
         }else{
