@@ -6,19 +6,25 @@ public class PlayerStats : MonoBehaviour
 {
     public Inventory inventory;
 
+
     public Stats baseStats;
     public Stats stats;
     [SerializeField]
     private TextMeshProUGUI attackText, durabilityText, energyText, recoveryText, supportText;
 
-    void Start(){
+
+    void Start()
+    {
         UpdateStats();
     }
 
 
-    public void UpdateStats(){
-        
+
+
+    public void UpdateStats()
+    {
         stats.Set(baseStats.Add(inventory.getEquipped()));
+
 
         attackText.text = stats.attack.ToString();
         durabilityText.text = stats.durability.ToString();
@@ -26,5 +32,7 @@ public class PlayerStats : MonoBehaviour
         recoveryText.text = stats.recovery.ToString();
         supportText.text = stats.support.ToString();
     }
+
+
 
 }
