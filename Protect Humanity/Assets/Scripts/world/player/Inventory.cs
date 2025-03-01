@@ -139,6 +139,16 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void UnequipItem(){
+        EquippedItem = null;
+
+        equipped.GetComponentInChildren<TextMeshProUGUI>().text = "Equipped";
+        equipped.GetComponentInChildren<Image>().sprite = null;
+
+
+        playerstats.UpdateStats();
+    }
+
 
     public Stats getEquipped(){
         GameObject g = new GameObject();
