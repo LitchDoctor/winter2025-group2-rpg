@@ -123,15 +123,19 @@ public class BattleSystem : MonoBehaviour
         if (state == BattleState.WON)
         {
             dialogueText.text = "You have won the battle!";
-            SceneManager.LoadScene(victoryScene);
+            StartCoroutine(LoadSceneAfterDelay(victoryScene));
         }
         else if (state == BattleState.LOST)
         {
             dialogueText.text = "You have lost the battle.";
-            SceneManager.LoadScene(lossScene);
-
+            StartCoroutine(LoadSceneAfterDelay(lossScene));
         }
+    }
 
+    IEnumerator LoadSceneAfterDelay(string sceneName)
+    {
+        yield return new WaitForSeconds(3f); // Wait 3 seconds to show message
+        SceneManager.LoadScene(sceneName);
     }
 
     public void OnHealButton()
@@ -165,7 +169,7 @@ public class BattleSystem : MonoBehaviour
         }
 
         bool isDead = false;
-        bool attackHuman = !IsTaunted && Random.Range(0, 2) == 1; // If taunted, always attack player
+        bool attackHuman = !IsTaunted && Random.Range(0, 10) >= 4; // If taunted, always attack player
 
         if (!RobotAlive)
         {
