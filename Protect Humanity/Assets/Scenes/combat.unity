@@ -855,7 +855,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1391344733}
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnAttackButton
+        m_MethodName: OnBlockButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1070,7 +1070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -113.7997, y: 10.799999}
+  m_AnchoredPosition: {x: -113.79956, y: 10.799999}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279808851
@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 778169170}
   - component: {fileID: 778169169}
   m_Layer: 5
-  m_Name: RobotBattleHud
+  m_Name: HumanBattleHud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1866,7 +1866,7 @@ GameObject:
   - component: {fileID: 878575458}
   - component: {fileID: 878575457}
   m_Layer: 5
-  m_Name: Robot Name
+  m_Name: Human Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1892,7 +1892,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player
+  m_text: Robot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1987,7 +1987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -254.9, y: 13}
+  m_AnchoredPosition: {x: -433, y: 13}
   m_SizeDelta: {x: 200, y: 51.824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &884516627
@@ -2001,7 +2001,7 @@ GameObject:
   - component: {fileID: 884516629}
   - component: {fileID: 884516628}
   m_Layer: 0
-  m_Name: robotBattleStation
+  m_Name: HumanBattleStation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3119,16 +3119,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c39d166b3c502438d2bfc8faeb750b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 830738563611193972, guid: 282e654e7b2efd54f86703fc2d960b9f, type: 3}
+  playerPrefab: {fileID: 5834486040791787246, guid: 57bc7cf81800b0443b5c8ac77baed757, type: 3}
   enemyPrefab: {fileID: 7455948565272372885, guid: 9a5f2832217a4ce469fcac169b205d3f, type: 3}
-  robotPrefab: {fileID: 5834486040791787246, guid: 57bc7cf81800b0443b5c8ac77baed757, type: 3}
+  humanPrefab: {fileID: 830738563611193972, guid: 282e654e7b2efd54f86703fc2d960b9f, type: 3}
   playerBattleStation: {fileID: 940618422}
   enemyBattleStation: {fileID: 1030640628}
-  robotBattleStation: {fileID: 884516629}
+  humanBattleStation: {fileID: 884516629}
   dialogueText: {fileID: 524378091}
   playerHUD: {fileID: 15918554}
   enemyHUD: {fileID: 1922074011}
-  robotHUD: {fileID: 778169169}
+  humanHUD: {fileID: 778169169}
   state: 0
 --- !u!4 &1391344734
 Transform:
@@ -3650,7 +3650,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -429.1, y: 13}
+  m_AnchoredPosition: {x: -258, y: 15}
   m_SizeDelta: {x: 200, y: 51.824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614573811
@@ -4816,7 +4816,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1391344733}
         m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
-        m_MethodName: OnAttackButton
+        m_MethodName: OnTauntButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
