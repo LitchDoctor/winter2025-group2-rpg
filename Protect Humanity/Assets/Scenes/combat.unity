@@ -1070,7 +1070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -113.79956, y: 10.799999}
+  m_AnchoredPosition: {x: -113.799446, y: 10.799999}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279808851
@@ -1892,7 +1892,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Robot
+  m_text: Human
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2539,8 +2539,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1469357683
+  m_SortingLayer: -2
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 4bfc8a9c83687ba44b598ed3af6049ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3120,8 +3120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 5834486040791787246, guid: 57bc7cf81800b0443b5c8ac77baed757, type: 3}
-  enemyPrefab: {fileID: 7455948565272372885, guid: 9a5f2832217a4ce469fcac169b205d3f, type: 3}
+  enemyPrefab: {fileID: 5408786617840390079, guid: 6b91638e6d61d9f4b8883f808ca5787c, type: 3}
   humanPrefab: {fileID: 830738563611193972, guid: 282e654e7b2efd54f86703fc2d960b9f, type: 3}
+  playerGO: {fileID: 0}
   playerBattleStation: {fileID: 940618422}
   enemyBattleStation: {fileID: 1030640628}
   humanBattleStation: {fileID: 884516629}
@@ -3673,7 +3674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Human
+  m_text: Robot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
