@@ -147,4 +147,22 @@ public class BattleSystem : MonoBehaviour
 
         StartCoroutine(PlayerAttack());
     }
+
+    IEnumerator PlayerStun()
+    {
+        playerUnit.Heal(5);
+        playerHUD.SetHP(playerUnit.currentHP);
+        dialogueText.text = "You healed for 5 HP!";
+        yield return new WaitForSeconds(2f);
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+    }
+
+    public void OnStunButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerStun());
+    }
 }
