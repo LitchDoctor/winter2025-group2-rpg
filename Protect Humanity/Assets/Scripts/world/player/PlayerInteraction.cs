@@ -77,7 +77,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             GetComponent<PlayerMovement>().LockMovement();
             GameBehaviour.Instance.ShowEncounterPanel();
-            //GameBehaviour.Instance.SetNextEncounter(other.GetComponent<Encounter>().encounterSceneName);
+            GameBehaviour.Instance.SetNextEncounter(other.GetComponent<Encounter>().encounterSceneName);
         }
     }
 
