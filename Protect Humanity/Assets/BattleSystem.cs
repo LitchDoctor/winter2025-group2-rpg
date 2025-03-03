@@ -116,15 +116,18 @@ public class BattleSystem : MonoBehaviour
 
     void EndBattle()
     {
-
+        string victoryScene = "stage1";
+        string lossScene = "Main Menu";
         if (state == BattleState.WON)
         {
             dialogueText.text = "You have won the battle!";
+            GameBehaviour.GoToScene(victoryScene);
         }
         else if (state == BattleState.LOST)
         {
             dialogueText.text = "You have lost the battle.";
-            GameBehaviour.Instance.SetNextEncounter(stage1);
+            GameBehaviour.GoToScene(lossScene);
+
         }
 
     }
