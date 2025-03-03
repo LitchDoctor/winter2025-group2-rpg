@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 
 
@@ -118,15 +119,16 @@ public class BattleSystem : MonoBehaviour
     {
         string victoryScene = "stage1";
         string lossScene = "Main Menu";
+
         if (state == BattleState.WON)
         {
             dialogueText.text = "You have won the battle!";
-            GameBehaviour.GoToScene(victoryScene);
+            SceneManager.LoadScene(victoryScene);
         }
         else if (state == BattleState.LOST)
         {
             dialogueText.text = "You have lost the battle.";
-            GameBehaviour.GoToScene(lossScene);
+            SceneManager.LoadScene(lossScene);
 
         }
 
