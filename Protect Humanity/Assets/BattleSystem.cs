@@ -12,17 +12,20 @@ public class BattleSystem : MonoBehaviour
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
+    public GameObject robotPrefab;
 
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
 
     Unit playerUnit;
     Unit enemyUnit;
+    Unit robotUnit;
 
     public TMP_Text dialogueText;
 
     public BattleHUD playerHUD;
     public BattleHUD enemyHUD;
+    public BattleHUD robotHUD;
 
     public BattleState state;
 
@@ -37,6 +40,9 @@ public class BattleSystem : MonoBehaviour
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
 
+        GameObject robotGO = Instantiate(robotPrefab, playerBattleStation);
+        robotUnit = robotGO.GetComponent<Unit>();
+
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<Unit>();
@@ -45,6 +51,7 @@ public class BattleSystem : MonoBehaviour
 
         playerHUD.SetHUD(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
+        robotHUD.SetHUD(robotUnit);
 
         yield return new WaitForSeconds(2f);
 
