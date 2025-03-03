@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      corruptedHumanSprite_0: -8606247414949156372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
