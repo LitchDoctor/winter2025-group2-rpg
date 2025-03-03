@@ -14,6 +14,8 @@ public class BattleSystem : MonoBehaviour
     public GameObject enemyPrefab;
     public GameObject humanPrefab;
 
+    public GameObject playerGO;
+
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
     public Transform humanBattleStation;
@@ -32,6 +34,8 @@ public class BattleSystem : MonoBehaviour
 
     bool IsBlocked = false;
     bool IsTaunted = false;
+    bool IsStunned = false;
+    bool RobotAlive = true;
 
     void Start()
     {
@@ -41,7 +45,7 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
-        GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
+        playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
 
         GameObject humanGO = Instantiate(humanPrefab, humanBattleStation);
@@ -65,10 +69,26 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
-        dialogueText.text = "Choose an action:";
+        if (!RobotAlive)
+        {
+            StartCoroutine(SkipToHumanTurn());
+        }
+        else
+        {
+            dialogueText.text = "Choose an action:";
+        }
     }
 
-  
+    IEnumerator SkipToHumanTurn()
+    {
+        dialogueText.text = "The robot is down, but the human can still fight!";
+        yield return new WaitForSeconds(2f);
+        state = BattleState.HUMANTURN;
+        StartCoroutine(HumanTurn());
+    }
+
+
+
 
     IEnumerator PlayerAttack()
     {
@@ -83,12 +103,13 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            state = BattleState.ENEMYTURN;
+            
             enemyHUD.SetHP(enemyUnit.currentHP);
             dialogueText.text = "You deal " + playerUnit.damage + " damage...";
 
             yield return new WaitForSeconds(2f);
-            StartCoroutine(EnemyTurn());
+            state = BattleState.HUMANTURN;
+            StartCoroutine(HumanTurn());
         }
 
     }
@@ -103,6 +124,7 @@ public class BattleSystem : MonoBehaviour
         else if (state == BattleState.LOST)
         {
             dialogueText.text = "You have lost the battle.";
+            GameBehaviour.Instance.SetNextEncounter(stage1);
         }
 
     }
@@ -121,54 +143,47 @@ public class BattleSystem : MonoBehaviour
         playerHUD.SetHP(playerUnit.currentHP);
         dialogueText.text = "You healed for 5 HP!";
         yield return new WaitForSeconds(2f);
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        state = BattleState.HUMANTURN;
+        StartCoroutine(HumanTurn());
     }
 
     IEnumerator EnemyTurn()
     {
+        if (IsStunned)
+        {
+            dialogueText.text = enemyUnit.unitName + " is stunned and skips its turn!";
+            yield return new WaitForSeconds(2f);
+            IsStunned = false;
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
+            yield break;
+        }
+
         bool isDead = false;
-        bool attackHuman = false;
+        bool attackHuman = !IsTaunted && Random.Range(0, 2) == 1; // If taunted, always attack player
 
-        if (!IsTaunted)
+        if (!RobotAlive)
         {
-            dialogueText.text = enemyUnit.unitName + " is deciding who to attack...";
-            yield return new WaitForSeconds(1f);
-
-            // Randomly choose target: 0 = Player (Robot), 1 = Human (NPC)
-            attackHuman = Random.Range(0, 2) == 1;
-
-            // Determine target unit and HUD
-            Unit targetUnit = attackHuman ? humanUnit : playerUnit;
-            BattleHUD targetHUD = attackHuman ? humanHUD : playerHUD;
-
-            dialogueText.text = enemyUnit.unitName + " attacks " + (attackHuman ? "the Human!" : "the Player!");
-            yield return new WaitForSeconds(1f);
-
-            int damage = enemyUnit.damage;
-
-            if (IsBlocked && attackHuman) // Block only affects the human (NPC)
-            {
-                damage /= 2; // Reduce damage to the human if the player blocks
-                IsBlocked = false;
-            }
-
-            isDead = targetUnit.TakeDamage(damage);
-            targetHUD.SetHP(targetUnit.currentHP);
+            attackHuman = true;
         }
-        else
+
+        Unit targetUnit = attackHuman ? humanUnit : playerUnit;
+        BattleHUD targetHUD = attackHuman ? humanHUD : playerHUD;
+
+        dialogueText.text = enemyUnit.unitName + " attacks " + (attackHuman ? "the Human!" : "the Player!");
+        yield return new WaitForSeconds(1f);
+
+        int damage = enemyUnit.damage;
+
+        if (attackHuman && IsBlocked)
         {
-            // taunt is active, attack robot
-            dialogueText.text = "The enemy is taunted so it attacks the robot";
-            isDead = playerUnit.TakeDamage(enemyUnit.damage);
-            playerHUD.SetHP(playerUnit.currentHP);
-            IsTaunted = false;
+            damage /= 2;
+            IsBlocked = false;
         }
-        
 
-        
-
-        
+        isDead = targetUnit.TakeDamage(damage);
+        targetHUD.SetHP(targetUnit.currentHP);
+        IsTaunted = false; // Taunt ends after enemy attacks
 
         yield return new WaitForSeconds(1f);
 
@@ -180,20 +195,78 @@ public class BattleSystem : MonoBehaviour
                 yield return new WaitForSeconds(2f);
                 state = BattleState.LOST;
                 EndBattle();
-                // The game is over because the Human dies
+                yield break;
             }
             else
             {
-                state = BattleState.LOST; // The robot died, needs further implementation
-                EndBattle();
+                RobotAlive = false;
+                playerHUD.gameObject.SetActive(false); // Hide player UI
+                playerGO.SetActive(false); //  hide robot model
+                dialogueText.text = "The robot has fallen!";
+                yield return new WaitForSeconds(2f);
+                state = BattleState.HUMANTURN;
+                StartCoroutine(HumanTurn());
+                yield break;
             }
+        }
+
+
+
+        state = BattleState.PLAYERTURN;
+        PlayerTurn();
+    }
+
+
+    IEnumerator HumanTurn()
+    {
+        if (!RobotAlive)
+        {
+            dialogueText.text = "The Human is fighting alone!";
+            yield return new WaitForSeconds(1f);
+        }
+
+
+        int rand = Random.Range(0, 100);
+        int damage = humanUnit.damage;
+
+        if (rand < 25)
+        {
+            dialogueText.text = "The Human briefly falls asleep";
+            damage = 0;
+        }
+        else if (rand < 50)
+        {
+            dialogueText.text = "The Human swings and misses";
+            damage = 0;
+        }
+        else if (rand < 80)
+        {
+            dialogueText.text = "The Human does some damage";
         }
         else
         {
-            state = BattleState.PLAYERTURN;
-            PlayerTurn();
+            dialogueText.text = "The Human scores a direct hit!";
+            damage *= 2;
+        }
+
+        yield return new WaitForSeconds(2f);
+
+        bool isDead = enemyUnit.TakeDamage(damage);
+        enemyHUD.SetHP(enemyUnit.currentHP);
+
+        if (isDead)
+        {
+            state = BattleState.WON;
+            enemyHUD.SetHP(enemyUnit.currentHP = 0);
+            EndBattle();
+        }
+        else
+        {
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
         }
     }
+
 
     public void OnAttackButton()
     {
@@ -207,22 +280,23 @@ public class BattleSystem : MonoBehaviour
     {
         int rand = Random.Range(0, 10);
 
-        // if the number is 0 - 5
+        // if the number is 0 - 5 (60% chance)
         if(rand <= 5)
         {
             // stun works
             dialogueText.text = "The enemy is stunned!";
+            IsStunned = true;
             yield return new WaitForSeconds(2f);
-            state = BattleState.PLAYERTURN;
-            PlayerTurn();
+            state = BattleState.HUMANTURN;
+            StartCoroutine(HumanTurn());
         }
         else
         {
             // stun fails
             dialogueText.text = "Oh no! The stun failed!";
             yield return new WaitForSeconds(2f);
-            state = BattleState.ENEMYTURN;
-            StartCoroutine(EnemyTurn());
+            state = BattleState.HUMANTURN;
+            StartCoroutine(HumanTurn());
         }
     }
 
@@ -231,7 +305,7 @@ public class BattleSystem : MonoBehaviour
         IsBlocked = true;
         dialogueText.text = "Blocked";
         yield return new WaitForSeconds(2f);
-        StartCoroutine(EnemyTurn());
+        StartCoroutine(HumanTurn());
     }
 
     public void OnBlockButton()
@@ -265,7 +339,7 @@ public class BattleSystem : MonoBehaviour
         IsTaunted = true;
         dialogueText.text = "Taunted!";
         yield return new WaitForSeconds(2f);
-        StartCoroutine(EnemyTurn());
+        StartCoroutine(HumanTurn());
     }
 
     
