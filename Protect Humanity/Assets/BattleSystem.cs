@@ -161,6 +161,11 @@ public class BattleSystem : MonoBehaviour
         bool isDead = false;
         bool attackHuman = !IsTaunted && Random.Range(0, 2) == 1; // If taunted, always attack player
 
+        if (!RobotAlive)
+        {
+            attackHuman = true;
+        }
+
         Unit targetUnit = attackHuman ? humanUnit : playerUnit;
         BattleHUD targetHUD = attackHuman ? humanHUD : playerHUD;
 

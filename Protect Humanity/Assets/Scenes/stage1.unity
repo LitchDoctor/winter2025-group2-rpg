@@ -53870,7 +53870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27fea3e9377571341a13869843e994cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  encounterSceneName: combat1
+  encounterSceneName: combat
 --- !u!1 &2050738543
 GameObject:
   m_ObjectHideFlags: 0
