@@ -16,6 +16,7 @@ public class BattleSystem : MonoBehaviour
 
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
+    public Transform robotBattleStation;
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -40,7 +41,7 @@ public class BattleSystem : MonoBehaviour
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
 
-        GameObject robotGO = Instantiate(robotPrefab, playerBattleStation);
+        GameObject robotGO = Instantiate(robotPrefab, robotBattleStation);
         robotUnit = robotGO.GetComponent<Unit>();
 
 
