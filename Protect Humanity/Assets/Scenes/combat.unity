@@ -1070,7 +1070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -113.79946, y: 10.799999}
+  m_AnchoredPosition: {x: -113.799446, y: 10.799999}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &279808851
@@ -3120,7 +3120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 5834486040791787246, guid: 57bc7cf81800b0443b5c8ac77baed757, type: 3}
-  enemyPrefab: {fileID: 4942922707288053097, guid: 7f8d11b276bee1d41b7bfa5462b02c8b, type: 3}
+  enemyPrefab: {fileID: 5408786617840390079, guid: 6b91638e6d61d9f4b8883f808ca5787c, type: 3}
   humanPrefab: {fileID: 830738563611193972, guid: 282e654e7b2efd54f86703fc2d960b9f, type: 3}
   playerGO: {fileID: 0}
   playerBattleStation: {fileID: 940618422}
