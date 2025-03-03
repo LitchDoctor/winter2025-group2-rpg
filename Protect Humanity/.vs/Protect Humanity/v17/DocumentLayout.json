@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "E:\\winter2025-group2-rpg\\Protect Humanity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|e:\\winter2025-group2-rpg\\protect humanity\\assets\\textmesh pro\\examples \u0026 extras\\scripts\\simplescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\textmesh pro\\examples \u0026 extras\\scripts\\simplescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|e:\\winter2025-group2-rpg\\protect humanity\\assets\\battlehud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\battlehud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|E:\\winter2025-group2-rpg\\Protect Humanity\\assets\\battlesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\battlesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|E:\\winter2025-group2-rpg\\Protect Humanity\\assets\\battlehud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\battlehud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SimpleScript.cs",
-              "DocumentMoniker": "E:\\winter2025-group2-rpg\\Protect Humanity\\Assets\\TextMesh Pro\\Examples \u0026 Extras\\Scripts\\SimpleScript.cs",
-              "RelativeDocumentMoniker": "Assets\\TextMesh Pro\\Examples \u0026 Extras\\Scripts\\SimpleScript.cs",
-              "ToolTip": "E:\\winter2025-group2-rpg\\Protect Humanity\\Assets\\TextMesh Pro\\Examples \u0026 Extras\\Scripts\\SimpleScript.cs",
-              "RelativeToolTip": "Assets\\TextMesh Pro\\Examples \u0026 Extras\\Scripts\\SimpleScript.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T23:36:30.93Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -45,22 +28,23 @@
               "RelativeDocumentMoniker": "Assets\\BattleHUD.cs",
               "ToolTip": "E:\\winter2025-group2-rpg\\Protect Humanity\\Assets\\BattleHUD.cs",
               "RelativeToolTip": "Assets\\BattleHUD.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T23:34:26.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "BattleSystem.cs",
               "DocumentMoniker": "E:\\winter2025-group2-rpg\\Protect Humanity\\Assets\\BattleSystem.cs",
               "RelativeDocumentMoniker": "Assets\\BattleSystem.cs",
               "ToolTip": "E:\\winter2025-group2-rpg\\Protect Humanity\\Assets\\BattleSystem.cs",
               "RelativeToolTip": "Assets\\BattleSystem.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwC4AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAuwEAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T23:31:11.975Z"
+              "WhenOpened": "2025-02-24T23:31:11.975Z",
+              "EditorCaption": ""
             }
           ]
         }
