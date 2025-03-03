@@ -57,12 +57,80 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "Choose an action:";
     }
 
-    IEnumerator PlayerAttack() 
+  
+
+    IEnumerator PlayerAttack()
     {
 
-        //damage
+        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+
+        if (isDead)
+        {
+            state = BattleState.WON;
+            enemyHUD.SetHP(enemyUnit.currentHP = 0);
+            EndBattle();
+        }
+        else
+        {
+            state = BattleState.ENEMYTURN;
+            enemyHUD.SetHP(enemyUnit.currentHP);
+            dialogueText.text = "You deal " + playerUnit.damage + " damage...";
+
+            yield return new WaitForSeconds(2f);
+            StartCoroutine(EnemyTurn());
+        }
+
+    }
+
+    void EndBattle()
+    {
+
+        if (state == BattleState.WON)
+        {
+            dialogueText.text = "You have won the battle!";
+        }
+        else if (state == BattleState.LOST)
+        {
+            dialogueText.text = "You have lost the battle.";
+        }
+
+    }
+
+    public void OnHealButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+
+        StartCoroutine(PlayerHeal());
+    }
+
+    IEnumerator PlayerHeal()
+    {
+        playerUnit.Heal(5);
+        playerHUD.SetHP(playerUnit.currentHP);
+        dialogueText.text = "You healed for 5 HP!";
         yield return new WaitForSeconds(2f);
-        //is dead
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
+    }
+
+    IEnumerator EnemyTurn()
+    {
+        dialogueText.text = enemyUnit.unitName + " attacks!";
+        yield return new WaitForSeconds(1f);
+        bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+        playerHUD.SetHP(playerUnit.currentHP);
+        yield return new WaitForSeconds(1f);
+        if (isDead)
+        {
+            state = BattleState.LOST;
+            EndBattle();
+        }
+        else
+        {
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
+        }
     }
     public void OnAttackButton()
     {
