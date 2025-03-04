@@ -6,6 +6,20 @@ https://docs.google.com/document/d/1jnsrercgkttsRrWxbyvnjN-BLG5NbcPtNfWLKqPxTyk/
 Link to Trello:
 https://trello.com/b/aRKvqJ4l/pt-2-group-2
 
+### How to run the System
+* 1. Navigate to the "installations" folder in the github repository 
+* 2. Download the zip file for your respective operating system 
+
+* Mac download: 
+
+* 3. Click on the "Protect Humanity" application to open the game
+* 4. Click the "start" button to begin playing the game
+    * For additional information on controls, press the "controls" button to learn more
+
+* Windows download: 
+
+
+
 ### Operational use cases
 
 ## Use case 1: Player movement
@@ -73,14 +87,6 @@ https://trello.com/b/aRKvqJ4l/pt-2-group-2
 * 4. Run through an iteration of combat making sure to utilize all of the available combat features to defeat the enemy
 * 5. Once an enemy is defeated, you're returned to the main scene where you can exit the application 
 
-### How to run the System
-* 1. Navigate to the "installations" folder in the github repository 
-* 2. Download the zip file for your respective operating system 
 
-* Windows download: 
 
-* Mac download: 
 
-* 3. Click on the "Protect Humanity" application to open the game
-* 4. Click the "start" button to begin playing the game
-    * For additional information on controls, press the "controls" button to learn more
