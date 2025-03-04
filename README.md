@@ -19,6 +19,16 @@ https://trello.com/b/aRKvqJ4l/pt-2-group-2
 * Windows download: 
 
 
+## Testing
+* 1. To test the primary features, use "WASD" to move your character around the map
+* 2. Using the specified movement keys, navigate toward your first item
+    * When in range of your first item, you'll have a pop-up message appear saying "press E to interact"
+* 3. Once you've picked up your first item, roam the map until you encounter your first enemy
+    * When you collide with an enemy, an encounter pop-up will appear with the options to "start" or "run"
+    * Click "start" to engage in combat
+* 4. Run through an iteration of combat making sure to utilize all of the available combat features to defeat the enemy
+* 5. Once an enemy is defeated, you're returned to the main scene where you can exit the application 
+
 
 ### Operational use cases
 
@@ -77,15 +87,6 @@ https://trello.com/b/aRKvqJ4l/pt-2-group-2
 * 8. A pop-up should appear saying "missing project ID do you want to continue" press "yes"
 * 9. Navigate to the folder you stored the build in and run the executable file by clicking the "protect humanity" application
 
-## Testing
-* 1. To test the primary features, use "WASD" to move your character around the map
-* 2. Using the specified movement keys, navigate toward your first item
-    * When in range of your first item, you'll have a pop-up message appear saying "press E to interact"
-* 3. Once you've picked up your first item, roam the map until you encounter your first enemy
-    * When you collide with an enemy, an encounter pop-up will appear with the options to "start" or "run"
-    * Click "start" to engage in combat
-* 4. Run through an iteration of combat making sure to utilize all of the available combat features to defeat the enemy
-* 5. Once an enemy is defeated, you're returned to the main scene where you can exit the application 
 
 
 
