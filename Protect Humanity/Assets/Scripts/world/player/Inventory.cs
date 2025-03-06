@@ -83,9 +83,15 @@ public class Inventory : MonoBehaviour
     {
         for(int i = 0; i < itemSlots.Length; i++){
             if(inventory[i] != null){
+
                 // Displays item name and sprites
+                Debug.Log($"Updating UI: Slot {i} -> {inventory[i].name}");
                 itemSlots[i].GetComponentInChildren<TextMeshProUGUI>().text = inventory[i].name;
                 itemSlots[i].GetComponentInChildren<Image>().sprite = inventory[i].GetComponent<SpriteRenderer>().sprite;
+
+                int index = i;  // Prevent closure issue
+                itemSlots[i].onClick.RemoveAllListeners();
+                itemSlots[i].onClick.AddListener(() => SelectItem(index));
             }
             else{
                 // Clear slot if empty 
