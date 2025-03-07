@@ -1,14 +1,14 @@
 ﻿# Protect Humanity
 
 ## Documentation
-[Living Document] (https://docs.google.com/document/d/1jnsrercgkttsRrWxbyvnjN-BLG5NbcPtNfWLKqPxTyk/edit?tab=t.0#heading=h.npvd45gblryb)
+[Living Document](https://docs.google.com/document/d/1jnsrercgkttsRrWxbyvnjN-BLG5NbcPtNfWLKqPxTyk/edit?tab=t.0#heading=h.npvd45gblryb)
 
 ## Repository and Trello
-[Github] (https://github.com/LitchDoctor/winter2025-group2-rpg)
+[Github](https://github.com/LitchDoctor/winter2025-group2-rpg)
 
-[Trello] (https://trello.com/b/aRKvqJ4l/pt-2-group-2)
+[Trello](https://trello.com/b/aRKvqJ4l/pt-2-group-2)
 
-# How to Insall
+# How to Install
 1. Navigate to the "installations" folder in the github repository 
 2. Download the zip file for your respective operating system 
 
@@ -29,6 +29,32 @@
     * Click "start" to engage in combat
 5. Run through an iteration of combat making sure to utilize all of the available combat features to defeat the enemy
 5. Once an enemy is defeated, you're returned to the main scene where you can continue playing
+
+# How to Build and Test the System
+
+# For Windows
+1. Download or clone the github repository containing the project
+2. Install Unity for Windows or MacOS
+3. Click on "File" in the top left of your screen
+4. Click on "Build Profiles"
+5. Click on "Player settings"
+6. Click the drop down menu for Resolution and Presentation 
+7. Change Fullscreen mode to "Maximized Window"
+8. Click "Build" 
+9. Navigate to the "installations" folder in the github repo
+10. Choose source destination to download file to and name it "WindowsTestbuild"
+11. A pop-up should appear saying "missing project ID do you want to continue" press "yes"
+12. Navigate to the folder you stored the build in and run the executable file by clicking the "protect humanity" application
+
+# For MacOS
+1. Download or clone the github repository containing the project
+2. Install Unity for Windows or MacOS 
+3. Click on "File" in the top left of your screen
+4. Click on "Build Profiles"
+5. Click "Build" 
+6. Navigate to the "installations" folder in the github repo
+7. A pop-up should appear saying "missing project ID do you want to continue" press "yes"
+8. Navigate to the folder you stored the build in and run the executable file by clicking the "protect humanity" application
 
 
 # Operational use cases
@@ -60,32 +86,6 @@
 7. Levelling up
 * User experience and level up system has yet to be implemented
 
-
-### How to Build and Test the System
-
-## For Windows
-1. Download or clone the github repository containing the project
-2. Install Unity for Windows or MacOS
-3. Click on "File" in the top left of your screen
-4. Click on "Build Profiles"
-5. Click on "Player settings"
-6. Click the drop down menu for Resolution and Presentation 
-7. Change Fullscreen mode to "Maximized Window"
-8. Click "Build" 
-9. Navigate to the "installations" folder in the github repo
-10. Choose source destination to download file to and name it "WindowsTestbuild"
-11. A pop-up should appear saying "missing project ID do you want to continue" press "yes"
-12. Navigate to the folder you stored the build in and run the executable file by clicking the "protect humanity" application
-
-## For MacOS
-1. Download or clone the github repository containing the project
-2. Install Unity for Windows or MacOS 
-3. Click on "File" in the top left of your screen
-4. Click on "Build Profiles"
-5. Click "Build" 
-6. Navigate to the "installations" folder in the github repo
-7. A pop-up should appear saying "missing project ID do you want to continue" press "yes"
-8. Navigate to the folder you stored the build in and run the executable file by clicking the "protect humanity" application
 
 
 
