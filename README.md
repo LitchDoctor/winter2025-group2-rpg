@@ -32,7 +32,7 @@
 
 # How to Build and Test the System
 
-# For Windows
+## For Windows
 1. Download or clone the github repository containing the project
 2. Install Unity for Windows or MacOS
 3. Click on "File" in the top left of your screen
@@ -46,7 +46,7 @@
 11. A pop-up should appear saying "missing project ID do you want to continue" press "yes"
 12. Navigate to the folder you stored the build in and run the executable file by clicking the "protect humanity" application
 
-# For MacOS
+## For MacOS
 1. Download or clone the github repository containing the project
 2. Install Unity for Windows or MacOS 
 3. Click on "File" in the top left of your screen
