@@ -19,3 +19,42 @@ After downloading Unity Hub and Visual Studio Code, follow the below steps to ma
 1. Open up Unity Hub and click on "Add" then select "Add project from disk"
 1. Open the cloned repository directory and select "Protect Humanity"
 1. From here, the project will open up and you will be able to edit the game
+
+## File Structure
+Nearly all files that are used for making the game fall under the assets directory. Below is a list showing what each directory inside of assets contains.
+
+Cainos
+* Sprites used for map design
+
+Dungeon Tiles
+* Map background tiles
+
+GameInputControllerIcons
+* All types of computer keys for the controls menu
+
+Gutty Kreum
+* Tiles used for border of map
+
+russian_cars_pixelart
+* Car objects used on map
+
+Scenes
+* All menus, maps, and battles
+
+Scripts
+* Functionality for all interactive components of the game
+
+Settings
+* Various settings for shaders, compatibility, build configurations, etc.
+
+Sprites
+* User-created art for items, enemies, and characters
+
+TechnoGami
+* Images used for buttons on the menu pages
+
+TextMesh Pro
+* Required fonts, prefabs, shaders, and sprites for producing on-screen text
+
+Unity.VisualScripting.Generated
+* Required for allowing visual scripts to interact with normal user-created scripts
