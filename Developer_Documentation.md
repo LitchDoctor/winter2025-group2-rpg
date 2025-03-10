@@ -20,6 +20,18 @@ After downloading Unity Hub and Visual Studio Code, follow the below steps to ma
 1. Open the cloned repository directory and select "Protect Humanity"
 1. From here, the project will open up and you will be able to edit the game
 
+### Building Project Executable
+Building a project executable must be done through Unity. After opening the project in Unity, follow these steps.
+
+1. Select "File" in the upper left
+1. From the dropdown menu, select "Build Profiles"
+1. Select the target platform from the menu on the left side
+1. Click "Switch Platform"
+1. After the platform is switched, view the "Scene List"
+1. Click the checkbox next to all scenes that you want to include
+1. (OPTIONAL) Open the player settings to change product name, version, resolution, etc.
+1. When finished adjusting settings, click "Build" or "Build and Run"
+
 ## File Structure
 Nearly all files that are used for making the game fall under the assets directory. Below is a list showing what each directory inside of assets contains.
 
