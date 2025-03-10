@@ -1,4 +1,5 @@
 ﻿# Protect Humanity
+Protect Humanity is a role-playing game where the player plays a robot who travels through a dangerous, apocalyptic world. Humanity is escaping to Mars. All of the humans have left Earth or have been mutated into horrifying monsters, except for one. Your job is to escort the last living human, safely to the launchpad. Good Luck!
 
 ## Documentation
 [Living Document](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/Living%20Document.pdf)
