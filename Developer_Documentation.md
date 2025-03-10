@@ -12,7 +12,7 @@ The following downloads are necessary to edit and develop different versions
 
 * [Visual Studio Code](https://code.visualstudio.com/download)
 
-### Developing New Versions
+### Developing and Building New Versions
 After downloading Unity Hub and Visual Studio Code, follow the below steps to make new changes to the project.
 
 1. Clone or Fork the repository
