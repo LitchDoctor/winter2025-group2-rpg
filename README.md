@@ -1,7 +1,9 @@
 ﻿# Protect Humanity
 
 ## Documentation
-[Living Document](https://docs.google.com/document/d/1jnsrercgkttsRrWxbyvnjN-BLG5NbcPtNfWLKqPxTyk/edit?tab=t.0#heading=h.npvd45gblryb)
+[Living Document](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/Living%20Document.pdf)
+
+[Developer Documentation](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/Developer_Documentation.md)
 
 ## Repository and Trello
 [Github](https://github.com/LitchDoctor/winter2025-group2-rpg)
