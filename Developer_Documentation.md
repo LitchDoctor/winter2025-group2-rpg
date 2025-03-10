@@ -32,6 +32,24 @@ Building a project executable must be done through Unity. After opening the proj
 1. (OPTIONAL) Open the player settings to change product name, version, resolution, etc.
 1. When finished adjusting settings, click "Build" or "Build and Run"
 
+## Program Architecture
+Protect Humanity follows an event-driven approach to architecture. It uses various event listeners with buttons to interact with different portion of the program. There are many different connections between the components, with the main interactions shown below.
+
+Main Events in The Overworld:
+* Running into an enemy and pressing "start" -> Entering a combat scene
+* Standing next to an item and pressing "e" -> Picking up an item and moving it to inventory
+
+Main Events in Combat Scenes:
+* Clicking "Attack" -> Damaging the opponent
+* Clicking "Defend" -> Enemy deals no damage to human character
+* Enemy loses all health -> User returns to the map to continue playing
+* User character loses all health -> User loses the game and is sent back to the Main Menu
+
+Main Events in Main Menu:
+* Clicking "Play" -> Sends user into the map to play the game
+* Clicking "Controls" -> Opens up a page full of game controls
+* Clicking "Quit" -> Exit out of the game completely
+
 ## File Structure
 Nearly all files that are used for making the game fall under the assets directory. Below is a list showing what each directory inside of assets contains.
 
