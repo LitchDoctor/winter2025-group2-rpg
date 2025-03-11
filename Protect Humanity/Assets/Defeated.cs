@@ -9,6 +9,7 @@ public class Defeated : MonoBehaviour
     {
         if (sceneInfo.returnedFromBattle == true)
         {
+            sceneInfo.returnedFromBattle = false;
             Destroy(gameObject);
         }
     }
