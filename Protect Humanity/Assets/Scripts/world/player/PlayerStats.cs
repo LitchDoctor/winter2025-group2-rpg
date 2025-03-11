@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
+    public static PlayerStats Instance; // singleton instance
+
     public Inventory inventory;
 
     public Stats baseStats;
@@ -11,9 +13,24 @@ public class PlayerStats : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI attackText, durabilityText, energyText, recoveryText, supportText;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Keep PlayerStats between scenes
+        }
+        else
+        {
+            Destroy(gameObject); // Prevent duplicate instances
+        }
+    }
+
     void Start(){
         UpdateStats();
     }
+
+
 
 
     public void UpdateStats(){
