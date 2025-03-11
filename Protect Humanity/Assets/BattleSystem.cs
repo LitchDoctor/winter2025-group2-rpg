@@ -39,6 +39,7 @@ public class BattleSystem : MonoBehaviour
     bool IsStunned = false;
     bool RobotAlive = true;
     bool Clicked = false;
+    bool Buffed = false;
 
     void Start()
     {
@@ -74,6 +75,7 @@ public class BattleSystem : MonoBehaviour
 
     void PlayerTurn()
     {
+        Clicked = false;
         if (!RobotAlive)
         {
             StartCoroutine(SkipToHumanTurn());
@@ -95,26 +97,14 @@ public class BattleSystem : MonoBehaviour
 
 
 
-    IEnumerator PlayerAttack()
+    IEnumerator PlayerBuff() // change to buff
     {
-        bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+        dialogueText.text = "The human has been buffed!";
+        Buffed = true;
 
-        if (isDead)
-        {
-            state = BattleState.WON;
-            enemyHUD.SetHP(enemyUnit.currentHP = 0);
-            EndBattle();
-        }
-        else
-        {
-        
-            enemyHUD.SetHP(enemyUnit.currentHP);
-            dialogueText.text = "You deal " + playerUnit.damage + " damage...";
-
-            yield return new WaitForSeconds(2f);
-            state = BattleState.HUMANTURN;
-            StartCoroutine(HumanTurn());
-        }
+        yield return new WaitForSeconds(2f);
+        state = BattleState.HUMANTURN;
+        StartCoroutine(HumanTurn());
     }
 
 
@@ -160,9 +150,9 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerHeal()
     {
-        playerUnit.Heal(playerUnit.energy);
-        playerHUD.SetHP(playerUnit.currentHP);
-        dialogueText.text = "You healed for " + playerUnit.energy + " HP!";
+        humanUnit.Heal(playerUnit.energy);
+        humanHUD.SetHP(humanUnit.currentHP);
+        dialogueText.text = "You heal the human for " + playerUnit.energy + " HP!";
         yield return new WaitForSeconds(2f);
         state = BattleState.HUMANTURN;
         StartCoroutine(HumanTurn());
@@ -276,9 +266,14 @@ public class BattleSystem : MonoBehaviour
             damage *= 2;
         }
 
+        if(damage != 0 && Buffed){
+            damage += playerUnit.support;
+            Buffed = false;
+        }
+
+        Debug.Log("human deals "+ damage + "damage");
         yield return new WaitForSeconds(2f);
 
-        Clicked = false;
         bool isDead = enemyUnit.TakeDamage(damage);
         enemyHUD.SetHP(enemyUnit.currentHP);
 
@@ -303,7 +298,7 @@ public class BattleSystem : MonoBehaviour
             if (state != BattleState.PLAYERTURN)
                 return;
 
-            StartCoroutine(PlayerAttack());
+            StartCoroutine(PlayerBuff());
         }
     }
 

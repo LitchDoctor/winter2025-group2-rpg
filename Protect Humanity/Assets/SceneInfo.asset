@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ad43cbf63502d41b103fa10cd20d8a, type: 3}
   m_Name: SceneInfo
   m_EditorClassIdentifier: 
-  returnedFromBattle: 1
+  returnedFromBattle: 0
   returnPosition: {x: 0, y: 0, z: 0}
