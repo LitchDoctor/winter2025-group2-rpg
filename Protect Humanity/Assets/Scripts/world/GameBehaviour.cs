@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,6 +6,9 @@ public class GameBehaviour : MonoBehaviour
 {
     private string nextEncounter;
     public static GameBehaviour Instance;
+
+    public GameObject player;
+    public SceneInfo sceneInfo;
 
     public GameObject encounterPanel;
     private void Awake()
@@ -26,6 +30,9 @@ public class GameBehaviour : MonoBehaviour
     }
 
     public void GoEncounter(){
+
+        sceneInfo.returnPosition = player.transform.position;
+
         SceneManager.LoadScene(nextEncounter);
     }
 

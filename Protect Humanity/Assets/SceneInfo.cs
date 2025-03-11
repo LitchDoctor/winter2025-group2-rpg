@@ -6,5 +6,5 @@ public class SceneInfo : ScriptableObject
 {
     public bool returnedFromBattle = false;
 
-    public Vector3 returnPosition;
+    public Vector3 returnPosition = new Vector3(0,0,0);
 }

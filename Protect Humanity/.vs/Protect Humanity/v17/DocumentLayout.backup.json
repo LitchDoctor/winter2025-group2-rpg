@@ -7,12 +7,8 @@
       "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\returnfrombattle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|c:\\users\\graha\\desktop\\homework\\software engineering ii\\winter2025-group2-rpg2\\protect humanity\\assets\\sceneinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\sceneinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\assets\\defeated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\defeated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|c:\\users\\graha\\desktop\\homework\\software engineering ii\\winter2025-group2-rpg2\\protect humanity\\assets\\scripts\\world\\gamebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\world\\gamebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1AC86FD4-FFF9-DEF6-CE93-C6027E72AA0C}|Assembly-CSharp.csproj|C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\assets\\battlesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,56 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "returnFromBattle.cs",
-              "DocumentMoniker": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\returnFromBattle.cs",
-              "RelativeDocumentMoniker": "Assets\\returnFromBattle.cs",
-              "ToolTip": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\returnFromBattle.cs",
-              "RelativeToolTip": "Assets\\returnFromBattle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "GameBehaviour.cs",
+              "DocumentMoniker": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\Scripts\\world\\GameBehaviour.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\world\\GameBehaviour.cs",
+              "ToolTip": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\Scripts\\world\\GameBehaviour.cs",
+              "RelativeToolTip": "Assets\\Scripts\\world\\GameBehaviour.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCEAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T21:05:42.338Z",
+              "WhenOpened": "2025-03-11T22:45:54.763Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Defeated.cs",
-              "DocumentMoniker": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\Defeated.cs",
-              "RelativeDocumentMoniker": "Assets\\Defeated.cs",
-              "ToolTip": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\Defeated.cs",
-              "RelativeToolTip": "Assets\\Defeated.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T20:46:28.12Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "BattleSystem.cs",
               "DocumentMoniker": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\BattleSystem.cs",
               "RelativeDocumentMoniker": "Assets\\BattleSystem.cs",
               "ToolTip": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\BattleSystem.cs",
               "RelativeToolTip": "Assets\\BattleSystem.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAEwHYAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAgwIoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T20:31:06.12Z"
+              "WhenOpened": "2025-03-11T20:31:06.12Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SceneInfo.cs",
-              "DocumentMoniker": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\SceneInfo.cs",
-              "RelativeDocumentMoniker": "Assets\\SceneInfo.cs",
-              "ToolTip": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\SceneInfo.cs",
-              "RelativeToolTip": "Assets\\SceneInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ReturnFromBattle.cs",
+              "DocumentMoniker": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\ReturnFromBattle.cs",
+              "RelativeDocumentMoniker": "Assets\\ReturnFromBattle.cs",
+              "ToolTip": "C:\\Users\\graha\\Desktop\\Homework\\Software Engineering II\\winter2025-group2-rpg2\\Protect Humanity\\Assets\\ReturnFromBattle.cs",
+              "RelativeToolTip": "Assets\\ReturnFromBattle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T20:22:47.359Z",
+              "WhenOpened": "2025-03-11T21:05:42.338Z",
               "EditorCaption": ""
             }
           ]

@@ -2833,6 +2833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a8b47a1730f4c243b7fb81e14836813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 570628589}
+  sceneInfo: {fileID: 11400000, guid: 1c20607ae28dee74ca3f133dda311693, type: 2}
   encounterPanel: {fileID: 131810682}
 --- !u!1 &533807035
 GameObject:
