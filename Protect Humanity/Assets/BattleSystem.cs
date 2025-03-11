@@ -37,6 +37,7 @@ public class BattleSystem : MonoBehaviour
     bool IsTaunted = false;
     bool IsStunned = false;
     bool RobotAlive = true;
+    bool Clicked = false;
 
     void Start()
     {
@@ -93,7 +94,6 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerAttack()
     {
-
         bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
 
         if (isDead)
@@ -104,7 +104,7 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-            
+        
             enemyHUD.SetHP(enemyUnit.currentHP);
             dialogueText.text = "You deal " + playerUnit.damage + " damage...";
 
@@ -112,7 +112,6 @@ public class BattleSystem : MonoBehaviour
             state = BattleState.HUMANTURN;
             StartCoroutine(HumanTurn());
         }
-
     }
 
     void EndBattle()
@@ -140,10 +139,14 @@ public class BattleSystem : MonoBehaviour
 
     public void OnHealButton()
     {
-        if (state != BattleState.PLAYERTURN)
-            return;
+        if(!Clicked){
+            Clicked = true;
+            if (state != BattleState.PLAYERTURN)
+                return;
 
-        StartCoroutine(PlayerHeal());
+            StartCoroutine(PlayerHeal());
+        }
+        
     }
 
     IEnumerator PlayerHeal()
@@ -260,6 +263,7 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        Clicked = false;
         bool isDead = enemyUnit.TakeDamage(damage);
         enemyHUD.SetHP(enemyUnit.currentHP);
 
@@ -279,14 +283,18 @@ public class BattleSystem : MonoBehaviour
 
     public void OnAttackButton()
     {
-        if (state != BattleState.PLAYERTURN)
-            return;
+        if(!Clicked){
+            Clicked = true;
+            if (state != BattleState.PLAYERTURN)
+                return;
 
-        StartCoroutine(PlayerAttack());
+            StartCoroutine(PlayerAttack());
+        }
     }
 
     IEnumerator PlayerStun()
     {
+
         int rand = Random.Range(0, 10);
 
         // if the number is 0 - 5 (60% chance)
@@ -319,28 +327,38 @@ public class BattleSystem : MonoBehaviour
 
     public void OnBlockButton()
     {
-        if (state != BattleState.PLAYERTURN)
-            return;
+        if(!Clicked){
+            Clicked = true;
+            if (state != BattleState.PLAYERTURN)
+                return;
 
-        StartCoroutine(PlayerBlock());
+            StartCoroutine(PlayerBlock());
+        }
+        
     }
 
 
 
     public void OnStunButton()
     {
-        if (state != BattleState.PLAYERTURN)
-            return;
+        if(!Clicked){
+            Clicked = true;
+            if (state != BattleState.PLAYERTURN)
+                return;
 
-        StartCoroutine(PlayerStun());
+            StartCoroutine(PlayerStun());
+        }
     }
 
     public void OnTauntButton()
     {
-        if (state != BattleState.PLAYERTURN)
-            return;
+        if(!Clicked){
+            Clicked = true;
+            if (state != BattleState.PLAYERTURN)
+                return;
 
-        StartCoroutine(PlayerTaunt());
+            StartCoroutine(PlayerTaunt());
+        }
     }
 
     IEnumerator PlayerTaunt()
