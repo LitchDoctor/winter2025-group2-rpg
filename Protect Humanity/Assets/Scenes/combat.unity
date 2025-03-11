@@ -3337,6 +3337,7 @@ MonoBehaviour:
   enemyHUD: {fileID: 1922074011}
   humanHUD: {fileID: 778169169}
   state: 0
+  sceneInfo: {fileID: 11400000, guid: 1c20607ae28dee74ca3f133dda311693, type: 2}
 --- !u!4 &1391344734
 Transform:
   m_ObjectHideFlags: 0
