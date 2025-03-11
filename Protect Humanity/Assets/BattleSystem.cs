@@ -22,7 +22,7 @@ public class BattleSystem : MonoBehaviour
     public Transform enemyBattleStation;
     public Transform humanBattleStation;
 
-    Unit playerUnit;
+    Player playerUnit;
     Unit enemyUnit;
     Unit humanUnit;
 
@@ -49,7 +49,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator SetupBattle()
     {
         playerGO = Instantiate(playerPrefab, playerBattleStation);
-        playerUnit = playerGO.GetComponent<Unit>();
+        playerUnit = playerGO.GetComponent<Player>();
 
         GameObject humanGO = Instantiate(humanPrefab, humanBattleStation);
         humanUnit = humanGO.GetComponent<Unit>();
@@ -60,7 +60,9 @@ public class BattleSystem : MonoBehaviour
 
         dialogueText.text = enemyUnit.unitName + " has entered the battle.";
 
-        playerHUD.SetHUD(playerUnit);
+        playerUnit.InitializeStats();
+
+        playerHUD.SetHUDPlayer(playerUnit);
         enemyHUD.SetHUD(enemyUnit);
         humanHUD.SetHUD(humanUnit);
 
@@ -158,9 +160,9 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator PlayerHeal()
     {
-        playerUnit.Heal(5);
+        playerUnit.Heal(playerUnit.energy);
         playerHUD.SetHP(playerUnit.currentHP);
-        dialogueText.text = "You healed for 5 HP!";
+        dialogueText.text = "You healed for " + playerUnit.energy + " HP!";
         yield return new WaitForSeconds(2f);
         state = BattleState.HUMANTURN;
         StartCoroutine(HumanTurn());
@@ -179,30 +181,36 @@ public class BattleSystem : MonoBehaviour
         }
 
         bool isDead = false;
-        bool attackHuman = !IsTaunted && Random.Range(0, 10) >= 4; // If taunted, always attack player
+        bool attackHuman = !IsTaunted && (Random.Range(0, 10) >= 4); // If taunted, always attack player
 
         if (!RobotAlive)
         {
             attackHuman = true;
         }
 
-        Unit targetUnit = attackHuman ? humanUnit : playerUnit;
-        BattleHUD targetHUD = attackHuman ? humanHUD : playerHUD;
+        //Unit targetUnit = attackHuman ? humanUnit : playerUnit;
+        //BattleHUD targetHUD = attackHuman ? humanHUD : playerHUD;
 
         dialogueText.text = enemyUnit.unitName + " attacks " + (attackHuman ? "the Human!" : "the Player!");
         yield return new WaitForSeconds(1f);
 
         int damage = enemyUnit.damage;
 
-        if (attackHuman && IsBlocked)
-        {
-            damage /= 2;
-            IsBlocked = false;
-        }
+        if(attackHuman){ // attack the human
+            if(IsBlocked){
+                damage /= 2;
+                IsBlocked = false;
+            }
+            isDead = humanUnit.TakeDamage(damage);
+            humanHUD.SetHP(humanUnit.currentHP);
 
-        isDead = targetUnit.TakeDamage(damage);
-        targetHUD.SetHP(targetUnit.currentHP);
-        IsTaunted = false; // Taunt ends after enemy attacks
+        }else { // attack the robot
+            damage -= playerUnit.durability;
+            isDead = playerUnit.TakeDamage(damage);
+            playerHUD.SetHP(playerUnit.currentHP);
+            IsTaunted = false;
+        }
+        
 
         yield return new WaitForSeconds(1f);
 

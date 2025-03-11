@@ -96,7 +96,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 419954221429911024}
-  - component: {fileID: 4376077710659836881}
+  - component: {fileID: 7483309327659218894}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -120,7 +120,7 @@ Transform:
   - {fileID: 6429820223755922248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4376077710659836881
+--- !u!114 &7483309327659218894
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,11 +129,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5834486040791787246}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef46fd218044ecf4d875ac7df2c27de4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8609e35d412a4bf40b99d7ec6f93f89f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: Robot
-  unitLevel: 2
-  damage: 5
-  maxHP: 30
-  currentHP: 30
+  unitName: 
+  unitLevel: 0
+  damage: 0
+  maxHP: 0
+  currentHP: 0
+  durability: 0
+  energy: 0
