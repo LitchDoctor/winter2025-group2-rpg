@@ -22,30 +22,46 @@ Stun the enemy, making them unable to attack for a round. Sometimes a stun might
 
 ### Armor
 Attack: 0
+
 Durability: 8
+
 Energy: 2
+
 Recovery: 2
+
 Support: 0
 
 ### Big Steel Bar
 Attack: 5
+
 Durability: 3
+
 Energy: 3
+
 Recovery: 3
+
 Support: 3
 
 ### Cheeseburger
 Attack: 0
+
 Durability: 2
+
 Energy: 6
+
 Recovery: 6
+
 Support: 4
 
 ### Machete
 Attack: 10
+
 Durability: 0
+
 Energy: 2
+
 Recovery: 0
+
 Support: 0
 
 ## Other Tips
