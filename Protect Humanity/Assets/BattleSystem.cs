@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using JetBrains.Annotations;
 
 
 
@@ -114,14 +115,20 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
+
+    public SceneInfo sceneInfo;
     void EndBattle()
     {
+
         string victoryScene = "stage1";
         string lossScene = "Main Menu";
 
         if (state == BattleState.WON)
         {
             dialogueText.text = "You have won the battle!";
+
+            sceneInfo.returnedFromBattle = true;
+
             StartCoroutine(LoadSceneAfterDelay(victoryScene));
         }
         else if (state == BattleState.LOST)
