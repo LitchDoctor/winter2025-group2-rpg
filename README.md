@@ -14,19 +14,12 @@ For details on how to build your own versions of the game, view the [Developer D
 
 For installing and distributing the game, view the [Setup Page](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/SETUP.md)
 
+For downloading the playable game, view the [Install Page](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/INSTALL.md)
+
 ## Repository and Trello
 [Github](https://github.com/LitchDoctor/winter2025-group2-rpg)
 
 [Trello](https://trello.com/b/aRKvqJ4l/pt-2-group-2)
-
-# How to Download and Play
-1. Navigate to the "installations" folder in the github repository 
-2. Download the zip file for your respective operating system
-  2. For Windows, select "Protect_Humanity_Windows_V1.0"
-  2. For MacOS, select "Protect_Humanity_MacOS_V1.0"
-3. After downloading, extract the items from the downloaded zip file into a folder
-4. Inside of the folder, select the "Protect Humanity" application
-5. The program will open up and be available to play
 
 # How to Test
 1. Use "WASD" to move your character around the map
