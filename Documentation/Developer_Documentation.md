@@ -40,8 +40,11 @@ Main Events in The Overworld:
 * Standing next to an item and pressing "e" -> Picking up an item and moving it to inventory
 
 Main Events in Combat Scenes:
-* Clicking "Attack" -> Damaging the opponent
-* Clicking "Defend" -> Enemy deals no damage to human character
+* Clicking "Buff" -> Increasing Human damage
+* Clicking "Defend" -> Enemy deals reduced damage to human character
+* Clicking "Taunt" -> Enemy is forced to attack the player
+* Clicking "Stun" -> There is a 60% chance the Enemy will skip its attack
+* Clicking "Heal" -> The human will be healed according the the player's energy value
 * Enemy loses all health -> User returns to the map to continue playing
 * User character loses all health -> User loses the game and is sent back to the Main Menu
 
