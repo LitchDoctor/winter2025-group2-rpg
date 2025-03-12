@@ -40,6 +40,7 @@ Before installing the game, ensure you have the following dependencies installed
 
 3. **Run the Game**
    - Navigate to the extracted folder.
+   - Open up the Builds directory
    - Double-click on `ProtectHumanity.exe` to launch the game.
    - If prompted by Windows Defender, click **More Info → Run Anyway**.
 
