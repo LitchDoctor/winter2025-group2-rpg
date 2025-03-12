@@ -17,10 +17,10 @@ public class InteractionObject : MonoBehaviour
     {
         if(inventory){
         //Picked up and put in inventory
-        gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
         else {
-        Debug.Log("Interacted with " + gameObject.name);
+            Debug.Log("Interacted with " + gameObject.name);
         }
     }
 }

@@ -237,4 +237,28 @@ public class MoveTest
         Object.Destroy(player);
     }
 
+    [UnityTest]
+    public IEnumerator LockMovement()
+    {
+        // Arrange
+        GameObject player = new GameObject();
+        Rigidbody2D rb = player.AddComponent<Rigidbody2D>();
+        rb.linearDamping = 0f;
+        rb.angularDamping = 0f;
+        rb.gravityScale = 0f;
+        PlayerMovement movement = player.AddComponent<PlayerMovement>();
+        movement.speed = 5f;
+        movement.LockMovement();
+        yield return null;
+
+        movement.setAsTest();
+        movement.setInput(0, 1);
+
+        yield return new WaitForFixedUpdate();
+
+        Assert.AreEqual(new Vector2(0, 0f), rb.linearVelocity);
+
+        Object.Destroy(player);
+    }
+
 }
