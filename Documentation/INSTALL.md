@@ -31,6 +31,7 @@ Before installing the game, ensure you have the following dependencies installed
 ### Windows Installation
 1. **Download the Game**
    - Download the latest version of the game from [GitHub Releases](https://github.com/LitchDoctor/winter2025-group2-rpg/releases).
+   - The Windows version will be called "ProtectHumanityWindowsBuild.zip"
    - Extract the `.zip` file to a preferred directory.
 
 2. **Install Dependencies**
@@ -45,6 +46,7 @@ Before installing the game, ensure you have the following dependencies installed
 ### macOS Installation
 1. **Download the Game**
    - Download the latest `.dmg` or `.zip` file from [GitHub Releases](https://github.com/LitchDoctor/winter2025-group2-rpg/releases).
+   - The MacOS version will be called "ProtectHumanityMacOSBuild.zip"
    - If downloaded as a `.zip`, extract the archive.
 
 2. **Install Dependencies**

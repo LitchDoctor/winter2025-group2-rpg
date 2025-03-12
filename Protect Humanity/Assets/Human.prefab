@@ -48,8 +48,8 @@ MonoBehaviour:
   unitName: Human
   unitLevel: 2
   damage: 5
-  maxHP: 10
-  currentHP: 10
+  maxHP: 20
+  currentHP: 20
 --- !u!1 &8582863282064364922
 GameObject:
   m_ObjectHideFlags: 0
