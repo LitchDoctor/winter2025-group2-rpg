@@ -60,3 +60,24 @@ For downloading the playable game, view the [Install Page](https://github.com/Li
 
 7. Levelling up
 * User experience and level up system has yet to be implemented
+
+# Running Automated Tests
+
+This project includes automated tests using the **Unity Test Framework**. Follow these steps to run the tests:
+
+## **1. Running Tests in the Unity Editor**
+1. Open the Unity project.
+2. Navigate to **Window → General → Test Runner**.
+3. Choose
+   - **Play Mode Tests** (for gameplay-related tests).
+4. Click **Run All** to execute the tests.
+
+## **2. Running Tests via Command Line (CI/CD)**
+You can also run tests from the command line for automation:
+
+```sh
+<Path to Unity Editor>/Unity.exe -runTests -projectPath "<Path to Your Project>" -testResults "TestResults.xml" -testPlatform PlayMode
+```
+
+Replace `<Path to Unity Editor>` and `<Path to Your Project>` with actual paths.
+
