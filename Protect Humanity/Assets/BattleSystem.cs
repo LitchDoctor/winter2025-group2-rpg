@@ -18,6 +18,7 @@ public class BattleSystem : MonoBehaviour
 
     public GameObject playerGO;
 
+    private GameObject player;
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
     public Transform humanBattleStation;
@@ -49,6 +50,8 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator SetupBattle()
     {
+
+        player = GameObject.Find("Player");
         playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Player>();
 
@@ -120,21 +123,25 @@ public class BattleSystem : MonoBehaviour
             dialogueText.text = "You have won the battle!";
 
             sceneInfo.returnedFromBattle = true;
-
-            StartCoroutine(LoadSceneAfterDelay(victoryScene));
+            
+            StartCoroutine(LoadSceneAfterDelay(victoryScene, 0));
         }
         else if (state == BattleState.LOST)
         {
             sceneInfo.returnedFromBattle = false;
 
             dialogueText.text = "You have lost the battle.";
-            StartCoroutine(LoadSceneAfterDelay(lossScene));
+            StartCoroutine(LoadSceneAfterDelay(lossScene, 1));
         }
     }
 
-    IEnumerator LoadSceneAfterDelay(string sceneName)
+    IEnumerator LoadSceneAfterDelay(string sceneName, int reload)
     {
         yield return new WaitForSeconds(3f); // Wait 3 seconds to show message
+        if (reload == 1){
+            Destroy(player);
+            Debug.Log("KILL PLAYER");
+        }
         SceneManager.LoadScene(sceneName);
     }
 
