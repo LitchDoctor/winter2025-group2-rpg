@@ -4,14 +4,14 @@
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        ""
+        "MoveScripts"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [
-        ""
+        "nunit.framework.dll"
     ],
     "autoReferenced": false,
     "defineConstraints": [
