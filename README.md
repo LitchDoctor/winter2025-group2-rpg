@@ -81,3 +81,79 @@ You can also run tests from the command line for automation:
 
 Replace `<Path to Unity Editor>` and `<Path to Your Project>` with actual paths.
 
+# Unity Testing Guide: Play Mode & Edit Mode Tests
+
+## 1. Setting Up the Test Framework
+1. Open Unity.
+2. Go to `Window > General > Test Runner`.
+3. Click `Create EditMode Test Assembly Folder`.
+4. Click `Create PlayMode Test Assembly Folder`.
+
+## 2. Creating Edit Mode Tests
+### Purpose
+Edit Mode tests run in the Unity Editor without entering Play Mode, useful for testing scripts that do not depend on scene interactions.
+
+### Steps
+1. Navigate to `Assets/Tests/EditMode`.
+2. Right-click in the folder -> `Create > C# Test Script`.
+3. Name the script (e.g., `EditModeTests.cs`).
+4. Open the script and modify it (Sample Below):
+
+```csharp
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.TestTools;
+
+public class EditModeTests
+{
+    [Test]
+    public void SimpleTest()
+    {
+        int a = 5;
+        int b = 10;
+        Assert.AreEqual(15, a + b);
+    }
+}
+```
+5. Save the script and return to Unity.
+6. Open `Test Runner`, select `EditMode`, and run the test.
+
+## 3. Creating Play Mode Tests
+### Purpose
+Play Mode tests run in a runtime environment, simulating actual gameplay interactions.
+
+### Steps
+1. Navigate to `Assets/Tests/PlayMode`.
+2. Right-click in the folder -> `Create > C# Test Script`.
+3. Name the script (e.g., `PlayModeTests.cs`).
+4. Open the script and modify it (Sample Below):
+
+```csharp
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.TestTools;
+using System.Collections;
+
+public class PlayModeTests
+{
+    [UnityTest]
+    public IEnumerator SimplePlayModeTest()
+    {
+        GameObject go = new GameObject("TestObject");
+        yield return new WaitForSeconds(1);
+        Assert.IsNotNull(go);
+    }
+}
+```
+5. Save the script and return to Unity.
+6. Open `Test Runner`, select `PlayMode`, and run the test.
+
+## 4. Running Tests
+- Open `Test Runner` from `Window > General > Test Runner`.
+- Select either `EditMode` or `PlayMode`.
+- Click `Run All` to execute tests.
+
+## 5. Debugging Tests
+- Use `Debug.Log()` to output values.
+- Check `Console` for assertion failures.
+- Ensure game objects are properly instantiated and destroyed in Play Mode tests.
