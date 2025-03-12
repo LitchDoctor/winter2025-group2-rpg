@@ -3303,7 +3303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  maxHp: 30
+  maxHp: 20
   durability: 2
   energy: 5
   support: 4
