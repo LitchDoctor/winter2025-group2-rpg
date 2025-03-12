@@ -1,4 +1,4 @@
-# SETUP.md
+# Setup Page
 
 ## Overview
 This document provides step-by-step instructions for setting up and deploying the 2D Unity game as a desktop application. The instructions cover dependencies, installation, and deployment steps for both Windows and macOS.

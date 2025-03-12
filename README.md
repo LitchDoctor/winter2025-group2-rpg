@@ -12,6 +12,8 @@ For more information about the whole project, check out the [Living Document](ht
 
 For details on how to build your own versions of the game, view the [Developer Documentation](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/Developer_Documentation.md)
 
+For installing and distributing the game, view the [Setup Page](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/SETUP.md)
+
 ## Repository and Trello
 [Github](https://github.com/LitchDoctor/winter2025-group2-rpg)
 
