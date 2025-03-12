@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour
     public Stats baseStats;
     public Stats stats;
     [SerializeField]
-    private TextMeshProUGUI attackText, durabilityText, energyText, recoveryText, supportText;
+    private TextMeshProUGUI levelText, durabilityText, energyText, maxHpText, supportText;
 
     private void Awake()
     {
@@ -37,10 +37,10 @@ public class PlayerStats : MonoBehaviour
         
         stats.Set(baseStats.Add(inventory.getEquipped()));
 
-        attackText.text = stats.attack.ToString();
+        levelText.text = stats.level.ToString();
+        maxHpText.text = stats.maxHp.ToString();
         durabilityText.text = stats.durability.ToString();
         energyText.text = stats.energy.ToString();
-        recoveryText.text = stats.recovery.ToString();
         supportText.text = stats.support.ToString();
     }
 

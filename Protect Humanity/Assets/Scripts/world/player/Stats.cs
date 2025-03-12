@@ -4,35 +4,35 @@ using UnityEngine;
 
 public class Stats : MonoBehaviour
     {
-    public int attack = 0, durability = 0, energy = 0, recovery = 0, support = 0;
+    public int level = 0, maxHp = 0, durability = 0, energy = 0, support = 0;
 
 
-    public void Initialize(int baseAttack, int baseDurability, int baseEnergy, int baseRecovery, int baseSupport)
+    public void Initialize(int baselevel, int baseMaxHp, int baseDurability, int baseEnergy, int baseSupport)
     {
-        attack = baseAttack;
+        level = baselevel;
         durability = baseDurability;
         energy = baseEnergy;
-        recovery = baseRecovery;
+        maxHp = baseMaxHp;
         support = baseSupport;
     }
 
 
-    public void Set(int newAttack, int newDurability, int newEnergy, int newRecovery, int newSupport)
+    public void Set(int newLevel, int newMaxHp, int newDurability, int newEnergy, int newSupport)
     {
-        attack = newAttack;
+        level = newLevel;
         durability = newDurability;
         energy = newEnergy;
-        recovery = newRecovery;
+        maxHp = newMaxHp;
         support = newSupport;
     }
 
 
     public void Set(Stats s1)
     {
-        attack = s1.attack;
+        level = s1.level;
         durability = s1.durability;
         energy = s1.energy;
-        recovery = s1.recovery;
+        maxHp = s1.maxHp;
         support = s1.support;
     }
 
@@ -42,7 +42,7 @@ public class Stats : MonoBehaviour
         GameObject g = new GameObject();
         g.AddComponent<Stats>();
         Stats result = g.GetComponent<Stats>();
-        result.Initialize(attack + s1.attack, durability + s1.durability, energy + s1.energy, recovery + s1.recovery, support + s1.support);
+        result.Initialize(level + s1.level, maxHp + s1.maxHp, durability + s1.durability, energy + s1.energy, support + s1.support);
         return result;
     }
 }
