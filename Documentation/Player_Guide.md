@@ -1,5 +1,5 @@
 # Protect Humanity Player Guide
-Welcome to the Protect Humanity Player Guide, the place to learn all about the game. In this document, you can learn about the different abilities. There is also information about each item's stats. There are some other gameplay tips as well.
+Welcome to the Protect Humanity Player Guide, the place to learn all about the game. In this document, you can learn about the different abilities, each item's stats, and other gameplay tips as well.
 
 ## Abilities
 
