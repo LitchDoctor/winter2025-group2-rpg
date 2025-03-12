@@ -30,25 +30,25 @@ Before installing the game, ensure you have the following dependencies installed
 
 ### Windows Installation
 1. **Download the Game**
-   - Download the latest version of the game from [GitHub Releases](https://github.com/your-repo-name/releases) or the provided link.
+   - Download the latest version of the game from [GitHub Releases](https://github.com/LitchDoctor/winter2025-group2-rpg/releases).
    - Extract the `.zip` file to a preferred directory.
 
 2. **Install Dependencies**
    - Ensure that the **Microsoft Visual C++ Redistributable** is installed.
-   - If the game requires .NET, install the **.NET Runtime**.
+   - Make sure to install the **.NET Runtime** if not already installed.
 
 3. **Run the Game**
    - Navigate to the extracted folder.
-   - Double-click on `GameName.exe` to launch the game.
+   - Double-click on `ProtectHumanity.exe` to launch the game.
    - If prompted by Windows Defender, click **More Info → Run Anyway**.
 
 ### macOS Installation
 1. **Download the Game**
-   - Download the latest `.dmg` or `.zip` file from [GitHub Releases](https://github.com/your-repo-name/releases).
+   - Download the latest `.dmg` or `.zip` file from [GitHub Releases](https://github.com/LitchDoctor/winter2025-group2-rpg/releases).
    - If downloaded as a `.zip`, extract the archive.
 
 2. **Install Dependencies**
-   - Ensure that the **.NET Runtime** is installed if required.
+   - Ensure that the **.NET Runtime** is installed.
 
 3. **Run the Game**
    - If using a `.dmg` file, open it and drag the game into the **Applications** folder.
@@ -59,7 +59,7 @@ Before installing the game, ensure you have the following dependencies installed
 
 ## Usage Guide
 ### Launching the Game
-- **Windows:** Double-click `GameName.exe`.
+- **Windows:** Double-click `ProtectHumanity.exe`.
 - **macOS:** Open the game from Applications.
 
 ### Troubleshooting
