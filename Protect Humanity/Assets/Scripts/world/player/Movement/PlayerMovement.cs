@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canMove = true;
 
+    private bool istest = false;
+
 
     void Start()
     {
@@ -22,10 +24,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
-
-        input.Normalize();
+        if (!istest){
+            setInput(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        }
     }
 
     private void FixedUpdate()
@@ -35,6 +36,17 @@ public class PlayerMovement : MonoBehaviour
         }else{
             rb.linearVelocity = input*0;
         }
+    }
+
+    public void setInput(float x, float y){
+        input.x = x;
+        input.y = y;
+
+        input.Normalize();
+    }
+
+    public void setAsTest(){
+        istest = true;
     }
 
     public void LockMovement(){
