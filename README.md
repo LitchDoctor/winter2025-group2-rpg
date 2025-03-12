@@ -8,25 +8,25 @@ The map includes enemy encounters that enter the player into a turn-based battle
 For tips on how to play, check out the [Player Guide](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/Player_Guide.md)
 
 ## Documentation
-[Living Document](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/Living%20Document.pdf)
+For more information about the whole project, check out the [Living Document](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/Living%20Document.pdf)
 
-[Developer Documentation](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/Developer_Documentation.md)
+For details on how to build your own versions of the game, view the [Developer Documentation](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/Developer_Documentation.md)
+
+For installing and distributing the game, view the [Setup Page](https://github.com/LitchDoctor/winter2025-group2-rpg/blob/main/Documentation/SETUP.md)
 
 ## Repository and Trello
 [Github](https://github.com/LitchDoctor/winter2025-group2-rpg)
 
 [Trello](https://trello.com/b/aRKvqJ4l/pt-2-group-2)
 
-# How to Install
+# How to Download and Play
 1. Navigate to the "installations" folder in the github repository 
-2. Download the zip file for your respective operating system 
-
-# How to Run
-
-1. Click on the application to open the game
-2. Press "start" to begin playing
-    * For additional information on controls, press the "controls" button to learn more
-
+2. Download the zip file for your respective operating system
+  2. For Windows, select "Protect_Humanity_Windows_V1.0"
+  2. For MacOS, select "Protect_Humanity_MacOS_V1.0"
+3. After downloading, extract the items from the downloaded zip file into a folder
+4. Inside of the folder, select the "Protect Humanity" application
+5. The program will open up and be available to play
 
 # How to Test
 1. Use "WASD" to move your character around the map
@@ -38,33 +38,6 @@ For tips on how to play, check out the [Player Guide](https://github.com/LitchDo
     * Click "start" to engage in combat
 5. Run through an iteration of combat making sure to utilize all of the available combat features to defeat the enemy
 5. Once an enemy is defeated, you're returned to the main scene where you can continue playing
-
-# How to Build and Test the System
-
-## For Windows
-1. Download or clone the github repository containing the project
-2. Install Unity for Windows or MacOS
-3. Click on "File" in the top left of your screen
-4. Click on "Build Profiles"
-5. Click on "Player settings"
-6. Click the drop down menu for Resolution and Presentation 
-7. Change Fullscreen mode to "Maximized Window"
-8. Click "Build" 
-9. Navigate to the "installations" folder in the github repo
-10. Choose source destination to download file to and name it "WindowsTestbuild"
-11. A pop-up should appear saying "missing project ID do you want to continue" press "yes"
-12. Navigate to the folder you stored the build in and run the executable file by clicking the "protect humanity" application
-
-## For MacOS
-1. Download or clone the github repository containing the project
-2. Install Unity for Windows or MacOS 
-3. Click on "File" in the top left of your screen
-4. Click on "Build Profiles"
-5. Click "Build" 
-6. Navigate to the "installations" folder in the github repo
-7. A pop-up should appear saying "missing project ID do you want to continue" press "yes"
-8. Navigate to the folder you stored the build in and run the executable file by clicking the "protect humanity" application
-
 
 # Operational use cases
 
@@ -94,9 +67,3 @@ For tips on how to play, check out the [Player Guide](https://github.com/LitchDo
 
 7. Levelling up
 * User experience and level up system has yet to be implemented
-
-
-
-
-
-
