@@ -105,6 +105,7 @@ public class PlayerInteraction : MonoBehaviour
         if(other.gameObject.tag == "encounter")
         {
             GameBehaviour.Instance.HideEncounterPanel();
+            GetComponent<PlayerMovement>().FreeMovement();
         }
     }
 }

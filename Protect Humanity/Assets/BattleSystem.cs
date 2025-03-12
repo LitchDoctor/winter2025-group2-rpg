@@ -135,6 +135,8 @@ public class BattleSystem : MonoBehaviour
         }
         else if (state == BattleState.LOST)
         {
+            sceneInfo.returnedFromBattle = false;
+
             dialogueText.text = "You have lost the battle.";
             StartCoroutine(LoadSceneAfterDelay(lossScene));
         }
