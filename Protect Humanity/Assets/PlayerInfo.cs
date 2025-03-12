@@ -5,7 +5,6 @@ public class Player : MonoBehaviour
     public string unitName;
     public int unitLevel;
     
-    public int damage;
     public int maxHP;
     public int currentHP;
     public int durability;
@@ -28,16 +27,15 @@ public class Player : MonoBehaviour
         {
             // Load stats from PlayerStats
             //unitLevel = PlayerStats.Instance.stats.level; use base value
-            unitLevel = 1;
             //maxHP = PlayerStats.Instance.stats.maxHP; use base value
-            maxHP = 30;
+            maxHP = PlayerStats.Instance.stats.maxHp;
             currentHP = maxHP;  // Start with full health
-            damage = PlayerStats.Instance.stats.attack;
+            unitLevel = PlayerStats.Instance.stats.level;
             durability = PlayerStats.Instance.stats.durability;
             energy = PlayerStats.Instance.stats.energy;
             support = PlayerStats.Instance.stats.support;
 
-            Debug.Log($"Player stats loaded: HP {currentHP}/{maxHP}, Damage: {damage}, Durability {durability}, Energy {energy}, Support {support}");
+            Debug.Log($"Player stats loaded: HP {currentHP}/{maxHP}, Level: {unitLevel}, Durability {durability}, Energy {energy}, Support {support}");
         }
         else
         {
