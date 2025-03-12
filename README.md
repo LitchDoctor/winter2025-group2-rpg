@@ -81,7 +81,7 @@ You can also run tests from the command line for automation:
 
 Replace `<Path to Unity Editor>` and `<Path to Your Project>` with actual paths.
 
-# Unity Testing Guide: Play Mode & Edit Mode Tests
+# How to Create Your Own Tests
 
 ## 1. Setting Up the Test Framework
 1. Open Unity.
