@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public int currentHP;
     public int durability;
     public int energy;
+    public int support;
 
 
     private void Start()
@@ -34,8 +35,9 @@ public class Player : MonoBehaviour
             damage = PlayerStats.Instance.stats.attack;
             durability = PlayerStats.Instance.stats.durability;
             energy = PlayerStats.Instance.stats.energy;
+            support = PlayerStats.Instance.stats.support;
 
-            Debug.Log($"Player stats loaded: HP {currentHP}/{maxHP}, Damage: {damage}, Durability {durability}, Energy {energy}");
+            Debug.Log($"Player stats loaded: HP {currentHP}/{maxHP}, Damage: {damage}, Durability {durability}, Energy {energy}, Support {support}");
         }
         else
         {

@@ -132,10 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8609e35d412a4bf40b99d7ec6f93f89f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: 
+  unitName: Player
   unitLevel: 0
   damage: 0
   maxHP: 0
   currentHP: 0
   durability: 0
   energy: 0
+  support: 0
